@@ -87,21 +87,28 @@ The point is choreographed by two tables in `court3d.js`:
 Positions are metres on a real 18 × 9 m court, net at `x = 0`, 3 m lines at `x = ±3`. Four players:
 `A1`/`A2` and `B1`/`B2`.
 
-The loop is **two points that land in the same place and are judged differently** — which is the
-whole rule in one animation:
+The loop is **two points, both won by B, who therefore serves both** — the rule in one animation:
 
-1. B dinks into A's front zone and nobody blocks it. Inside the 3 m line is out, so the attacker
-   loses the rally: **point A**.
-2. A attacks, B blocks it straight back down, and it lands in A's front zone again. This one
-   touched a block, so the exception applies and it is not out: **point B**.
+1. A dinks into B's front zone and nobody blocks it. Inside the 3 m line is out, so the attacker
+   loses the rally: **point B**.
+2. A attacks again, B blocks it straight back down into A's own front zone. This one touched a
+   block, so the exception applies and it is not out: **point B**.
 
-Between the points a player picks the ball up and lobs it to whoever serves next, so the ball
-never teleports across the loop, and the last node's position equals the first node's.
+The two points go the same way for a reason. A rally decided by the 3 m rule is always lost by the
+attacker, and the attacker is the receiving side — so a short rally is always won by the server.
+Rally scoring then keeps them on serve, and two short rallies in a row is a run, not a change of
+serve. A loop where the serve changed hands would have to show the loser serving, which is what an
+earlier version did wrong. The scoreboard marks who holds serve with a block beside their name,
+and resets with the loop, since it is counting the two points on screen and nothing else.
+
+Between the points a player picks the ball up and returns it to the server, so the ball never
+teleports across the loop, and the last node's position equals the first node's.
 
 `BBCourt.seek(t)` jumps to any moment, which is how each beat was checked. The choreography is
-also audited numerically: every actor is within 0.35 m of the ball at their contact, the ball
-clears the 2.43 m net on all six crossings, teammates never come within a metre of each other, and
-no defender is within 1.5 m of either dead ball.
+also audited numerically: the winner of each point serves the next one (including across the loop
+wrap), every actor is within 0.35 m of the ball at their contact, the ball clears the 2.43 m net on
+every crossing, teammates never come within a metre of each other, no defender is within 1.5 m of
+either dead ball, and both the ball and all four players are continuous across the wrap.
 
 ## Editing the copy
 

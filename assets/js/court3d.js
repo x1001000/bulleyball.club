@@ -226,59 +226,64 @@
   };
 
   /* -------------------------------------------------- rally script
-     Two points, both ending with the ball on Team A's floor inside their
-     own 3 m zone — the same landing spot, opposite verdicts:
+     Two points, and B wins both, so B serves both — the winner serves,
+     which is what forced this shape: a rally decided by the 3 m rule is
+     always lost by the attacker, and the attacker is the receiving side,
+     so a short rally is always won by the server. Two short rallies in a
+     row therefore means one team on a run, not the serve changing hands.
 
-       rally 1  B dinks it short, nobody blocks  -> inside 3 m = OUT,
-                the attacker loses it, point A
-       rally 2  A attacks, B blocks it back down -> it touched a block,
-                so the exception applies, not out, point B
+       rally 1  A dinks into B's front zone, nobody blocks -> inside 3 m
+                is out, the attacker loses it, point B
+       rally 2  A attacks, B blocks it back down into A's own front zone
+                -> it touched a block, the exception applies, point B
 
-     Between the points a player picks the ball up and lobs it to whoever
-     serves next, so the ball never teleports across the loop.          */
+     Between the points a player picks the ball up and returns it to the
+     server, so the ball never teleports across the loop.               */
   var LOOP = 16.6;
   var NODES = [
-    /* ---- rally 1: A serves, B dinks into A's front zone, no block ---- */
-    { t: 0.00,  p: [-9.70, 2.15, -1.20], act: "A1", cap: "serve", arc: 0.0 },
-    { t: 1.60,  p: [ 6.30, 0.85,  2.40], act: "B2", cap: "dig",   arc: 3.4 },
-    { t: 2.70,  p: [ 3.00, 2.25, -0.45], act: "B1", cap: "set",   arc: 3.0 },
-    { t: 3.70,  p: [ 1.35, 3.15,  0.60], act: "B2", cap: "spike", arc: 1.5 },
-    { t: 4.45,  p: [-2.00, 0.11, -0.80], act: null, cap: "out",   arc: 0.9, pt: "A" },
-    { t: 4.95,  p: [-2.45, 0.11, -0.88], act: null, cap: "out",   arc: 0.25 },
-    { t: 5.50,  p: [-2.70, 0.11, -0.93], act: null, cap: "out",   arc: 0.1 },
-    { t: 6.30,  p: [-2.70, 1.10, -0.93], act: "A1", cap: "out",   arc: 0.05 },
-    /* ---- rally 2: B serves, A attacks, B blocks it back down ---- */
-    { t: 7.80,  p: [ 9.70, 2.15,  1.20], act: "B2", cap: "serve", arc: 2.6 },
+    /* ---- rally 1: B serves, A dinks short, nobody blocks ---- */
+    { t: 0.00,  p: [ 9.70, 2.15,  1.20], act: "B2", cap: "serve", arc: 0.0, srv: "B" },
+    { t: 1.60,  p: [-6.30, 0.85, -2.40], act: "A2", cap: "dig",   arc: 3.4 },
+    { t: 2.70,  p: [-3.00, 2.25,  0.45], act: "A1", cap: "set",   arc: 3.0 },
+    { t: 3.70,  p: [-1.35, 3.15, -0.60], act: "A2", cap: "dink",  arc: 1.5 },
+    { t: 4.45,  p: [ 2.00, 0.11,  0.80], act: null, cap: "out",   arc: 0.9, pt: "B" },
+    { t: 4.95,  p: [ 2.45, 0.11,  0.88], act: null, cap: "out",   arc: 0.25 },
+    { t: 5.50,  p: [ 2.70, 0.11,  0.93], act: null, cap: "out",   arc: 0.1 },
+    { t: 6.30,  p: [ 2.70, 1.10,  0.93], act: "B1", cap: "out",   arc: 0.05 },
+    /* ---- rally 2: B serves again, A attacks, B blocks it down ---- */
+    { t: 7.80,  p: [ 9.70, 2.15, -1.20], act: "B2", cap: "serve", arc: 2.6, srv: "B" },
     { t: 9.40,  p: [-6.20, 0.85, -2.30], act: "A2", cap: "dig",   arc: 3.4 },
-    { t: 10.50, p: [-2.95, 2.30,  0.40], act: "A1", cap: "set",   arc: 3.0 },
-    { t: 11.55, p: [-1.30, 3.20, -1.10], act: "A2", cap: "spike", arc: 1.5 },
-    { t: 12.05, p: [ 0.32, 3.10, -1.02], act: "B1", cap: "block", arc: 0.2 },
-    { t: 13.00, p: [-1.85, 0.11, -0.85], act: null, cap: "point", arc: 0.85, pt: "B" },
-    { t: 13.50, p: [-2.35, 0.11, -0.80], act: null, cap: "point", arc: 0.25 },
-    { t: 14.05, p: [-2.70, 0.11, -0.75], act: null, cap: "point", arc: 0.1 },
-    { t: 14.80, p: [-2.70, 1.10, -0.75], act: "A1", cap: "point", arc: 0.05 },
-    { t: 16.40, p: [-9.70, 2.15, -1.20], act: "A1", cap: "serve", arc: 2.6 }
+    { t: 10.50, p: [-3.00, 2.30,  0.55], act: "A1", cap: "set",   arc: 3.0 },
+    { t: 11.55, p: [-1.30, 3.20, -0.55], act: "A2", cap: "spike", arc: 1.5 },
+    { t: 12.05, p: [ 0.32, 3.10, -0.48], act: "B1", cap: "block", arc: 0.2 },
+    { t: 13.00, p: [-1.85, 0.11, -0.40], act: null, cap: "point", arc: 0.85, pt: "B" },
+    { t: 13.50, p: [-2.35, 0.11, -0.42], act: null, cap: "point", arc: 0.25 },
+    { t: 14.05, p: [-2.70, 0.11, -0.40], act: null, cap: "point", arc: 0.1 },
+    { t: 14.80, p: [-2.70, 1.10, -0.40], act: "A1", cap: "point", arc: 0.05 },
+    { t: 16.40, p: [ 9.70, 2.15,  1.20], act: "B2", cap: "serve", arc: 2.6, srv: "B" }
   ];
 
   /* hand-authored player keyframes: [t, x, z, jumpHeight].
-     Note that in rally 1 neither B player jumps: the point is that they
-     let the short ball drop, because inside the 3 m line it is out.   */
+     A1 keeps the +z lane and A2 the -z lane all the way round, so the
+     two of them never cross and never stand on each other. Neither B
+     player jumps in rally 1: they let the short ball drop, because
+     inside the 3 m line it is out.                                    */
   var KEYS = {
-    A1: [[0.0, -9.7, -1.2, 0.45], [1.9, -6.4, -1.0, 0], [3.7, -5.2, -1.4, 0],
-         [4.6, -4.6, -1.3, 0], [6.3, -2.7, -0.93, 0], [7.8, -4.8, 0.6, 0],
-         [10.5, -2.95, 0.4, 0], [12.1, -3.6, 0.0, 0], [14.8, -2.7, -0.75, 0],
-         [16.4, -9.7, -1.2, 0]],
-    A2: [[0.0, -5.6, 1.6, 0], [3.7, -5.0, 1.2, 0], [6.0, -5.4, 1.6, 0],
-         [7.8, -5.6, -1.2, 0], [9.4, -6.2, -2.3, 0], [10.8, -3.9, -1.8, 0],
-         [11.55, -1.3, -1.1, 0.92], [12.4, -2.2, -2.4, 0], [13.6, -5.5, -2.6, 0],
-         [16.4, -5.6, 1.6, 0]],
-    B1: [[0.0, 5.6, -1.9, 0], [2.7, 3.0, -0.45, 0], [4.2, 4.2, -0.9, 0],
-         [6.0, 5.4, -1.6, 0], [7.8, 4.6, -1.6, 0], [10.8, 2.6, -0.6, 0],
-         [12.05, 0.5, -1.02, 0.78], [12.9, 1.4, -1.0, 0], [16.4, 5.6, -1.9, 0]],
-    B2: [[0.0, 6.5, 2.2, 0], [1.6, 6.3, 2.4, 0], [3.0, 3.6, 1.4, 0],
-         [3.7, 1.35, 0.6, 0.92], [4.6, 2.6, 0.9, 0], [6.3, 5.0, 1.6, 0],
-         [7.8, 9.7, 1.2, 0.45], [9.6, 6.6, 1.0, 0], [12.05, 4.6, 1.6, 0],
-         [16.4, 6.5, 2.2, 0]]
+    A1: [[0.0, -4.6, 1.6, 0], [2.7, -3.0, 0.45, 0], [4.2, -3.9, 1.0, 0],
+         [6.0, -4.6, 1.6, 0], [7.8, -4.8, 1.8, 0], [10.5, -3.0, 0.55, 0],
+         [12.1, -3.7, 1.1, 0], [14.8, -2.7, -0.4, 0], [16.4, -4.6, 1.6, 0]],
+    A2: [[0.0, -5.6, -1.8, 0], [1.6, -6.3, -2.4, 0], [3.0, -3.6, -1.6, 0],
+         [3.7, -1.35, -0.6, 0.92], [4.6, -2.6, -1.2, 0], [6.0, -5.2, -1.8, 0],
+         [7.8, -5.6, -1.8, 0], [9.4, -6.2, -2.3, 0], [10.7, -4.4, -1.9, 0],
+         [11.55, -1.3, -0.55, 0.92], [12.4, -2.6, -1.6, 0], [13.6, -5.4, -2.2, 0],
+         [16.4, -5.6, -1.8, 0]],
+    B1: [[0.0, 5.6, -1.9, 0], [2.6, 4.6, -1.4, 0], [3.7, 4.0, -1.2, 0],
+         [5.5, 3.2, 0.2, 0], [6.3, 2.7, 0.93, 0], [7.8, 4.8, -0.6, 0],
+         [10.8, 2.6, -0.9, 0], [12.05, 0.5, -0.48, 0.78], [12.9, 1.4, -0.6, 0],
+         [16.4, 5.6, -1.9, 0]],
+    B2: [[0.0, 9.7, 1.2, 0.45], [2.0, 6.8, 1.0, 0], [3.7, 5.6, 1.4, 0],
+         [4.6, 5.2, 1.2, 0], [6.3, 6.5, 0.4, 0], [7.8, 9.7, -1.2, 0.45],
+         [9.6, 6.8, -0.8, 0], [12.05, 5.4, 0.6, 0], [16.4, 9.7, 1.2, 0]]
   };
   var IDS = ["A1", "A2", "B1", "B2"];
   function team(id) { return id.charAt(0); }
@@ -610,6 +615,8 @@
     if (this.time >= LOOP) {
       this.time -= LOOP;
       this.node = -1;
+      this.score = [0, 0];
+      if (this.opts.onScore) this.opts.onScore(0, 0);
     }
     this.updateCaption();
   };
@@ -623,11 +630,11 @@
     if (this.opts.onCaption) this.opts.onCaption(NODES[idx].cap);
     /* the point is awarded by the rally that just ended, not by a counter */
     if (NODES[idx].pt && !back) {
-      var w = NODES[idx].pt === "A" ? 0 : 1;
-      this.score[w]++;
-      if (this.score[0] >= 25 || this.score[1] >= 25) this.score = [0, 0];
+      this.score[NODES[idx].pt === "A" ? 0 : 1]++;
       if (this.opts.onScore) this.opts.onScore(this.score[0], this.score[1]);
     }
+    /* who holds serve — the point of this loop is that the winner keeps it */
+    if (NODES[idx].srv && this.opts.onServe) this.opts.onServe(NODES[idx].srv);
   };
 
   Stage.prototype.setTheme = function (name, instant) {

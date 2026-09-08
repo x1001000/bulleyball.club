@@ -81,6 +81,10 @@
         var ea = document.getElementById("score-a"), eb = document.getElementById("score-b");
         if (ea) ea.textContent = a;
         if (eb) eb.textContent = b;
+      },
+      onServe: function (side) {
+        var sb = document.getElementById("scoreboard");
+        if (sb) sb.setAttribute("data-serve", side.toLowerCase());
       }
     });
     if (!ok) {

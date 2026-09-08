@@ -215,6 +215,14 @@ a { color: inherit; }
   border: 3px solid var(--edge);
   padding: .4em .8em; font-family: "Press Start 2P", monospace; font-size: clamp(.42rem, 1.3vw, .62rem);
 }
+/* a block beside the team that holds serve */
+.scoreboard .team::before {
+  content: ""; display: inline-block; vertical-align: middle;
+  width: 0; height: 6px; margin-right: 0; background: currentColor;
+  transition: width .18s steps(2), margin-right .18s steps(2);
+}
+.scoreboard[data-serve="a"] .team.a::before,
+.scoreboard[data-serve="b"] .team.b::before { width: 6px; margin-right: 5px; }
 .scoreboard .team.a { color: var(--accent); }
 .scoreboard .team.b { color: var(--accent-3); }
 .scoreboard .score { min-width: 2ch; text-align: center; }
