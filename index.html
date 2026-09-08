@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>地攤排球 Bulleyball ｜ 地攤排球運動推廣俱樂部</title>
+<meta name="description" data-i18n-attr="content:meta.desc" content="地攤排球 Bulleyball：一般場地就能開打的 2v2／3v3 街頭排球。攤子一擺，球不落地。非營利推廣俱樂部官方網站。">
+<meta name="theme-color" content="#0f1020">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="地攤排球 Bulleyball">
+<meta property="og:description" content="攤子一擺，球不落地。一般場地就能開打的 2v2／3v3 街頭排球。">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+/* Bootstrap theme + language before paint to avoid a flash of the wrong mode. */
+(function () {
+  try {
+    var t = localStorage.getItem('bb-theme');
+    if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+    var l = localStorage.getItem('bb-lang');
+    if (!l) l = (navigator.language || 'zh').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+    document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-Hant' : 'en');
+    document.documentElement.setAttribute('data-lang', l);
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">跳到主要內容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 16 16" width="32" height="32" shape-rendering="crispEdges">
+          <rect x="2" y="2" width="12" height="12" fill="var(--accent)"/>
+          <rect x="4" y="4" width="8" height="8" fill="var(--paper)"/>
+          <rect x="4" y="7" width="8" height="2" fill="var(--ink)"/>
+          <rect x="7" y="4" width="2" height="8" fill="var(--ink)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <b class="brand-zh">地攤排球</b>
+        <b class="brand-en latin">BULLEYBALL</b>
+      </span>
+    </a>
+
+    <button class="nav-toggle pixel-btn" aria-expanded="false" aria-controls="site-nav" data-i18n-attr="aria-label:a11y.menu">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" data-i18n-attr="aria-label:a11y.nav">
+      <a href="#about" data-i18n="nav.about">介紹</a>
+      <a href="#rules" data-i18n="nav.rules">規則</a>
+      <a href="#programs" data-i18n="nav.programs">我們在做的事</a>
+      <a href="#join" data-i18n="nav.join">參與</a>
+      <a href="#support" data-i18n="nav.support">支持</a>
+      <a href="#faq" data-i18n="nav.faq">問答</a>
+      <a href="#contact" data-i18n="nav.contact">聯絡</a>
+    </nav>
+
+    <div class="switches">
+      <button id="lang-toggle" class="pixel-btn small" data-i18n-attr="aria-label:a11y.lang">
+        <span class="latin">中／EN</span>
+      </button>
+      <button id="theme-toggle" class="pixel-btn small" data-i18n-attr="aria-label:a11y.theme">
+        <span class="theme-ico" aria-hidden="true"></span>
+        <span class="theme-label" data-i18n="ui.night">夜場</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="hero.eyebrow">非營利推廣俱樂部</p>
+      <h1 class="hero-title">
+        <span class="t-zh">地攤排球</span>
+        <span class="t-en latin">BULLEYBALL</span>
+      </h1>
+      <p class="hero-slogan" data-i18n="hero.slogan">攤子一擺，球不落地。</p>
+      <p class="hero-lead" data-i18n="hero.lead">不用揪滿 12 個人，不用等海邊的沙。一顆球、兩雙球鞋、一塊空地，2v2 或 3v3 立刻開打——這是排球版的街頭鬥牛。</p>
+      <div class="hero-cta">
+        <a class="pixel-btn primary" href="#rules" data-i18n="hero.cta1">看怎麼玩</a>
+        <a class="pixel-btn" href="#join" data-i18n="hero.cta2">加入我們</a>
+      </div>
+      <ul class="hero-facts">
+        <li><b class="latin">2v2 / 3v3</b><span data-i18n="hero.fact1">上場人數</span></li>
+        <li><b class="latin">18 × 9 m</b><span data-i18n="hero.fact2">一般排球場</span></li>
+        <li><b class="latin">3 m</b><span data-i18n="hero.fact3">前區＝出界區</span></li>
+      </ul>
+    </div>
+
+    <figure class="court-stage">
+      <div class="stage-frame">
+        <canvas id="court-canvas" width="384" height="216" data-i18n-attr="aria-label:a11y.canvas"
+                role="img" aria-label="2v2 地攤排球對戰的像素風 3D 動畫"></canvas>
+        <div class="stage-hud" aria-hidden="true">
+          <div class="scoreboard">
+            <span class="team a latin">STALL</span>
+            <span class="score latin" id="score-a">0</span>
+            <span class="sep latin">:</span>
+            <span class="score latin" id="score-b">0</span>
+            <span class="team b latin">STREET</span>
+          </div>
+          <div class="caption" id="stage-caption" data-i18n="stage.serve">發球</div>
+        </div>
+        <div class="stage-fallback" id="stage-fallback" hidden data-i18n="stage.fallback">
+          你的瀏覽器無法顯示這段動畫，但球場永遠都在。
+        </div>
+      </div>
+      <figcaption class="stage-cap">
+        <button id="anim-toggle" class="pixel-btn small" data-i18n="ui.pause">暫停動畫</button>
+        <span data-i18n="stage.hint">切換日夜模式，球場也會跟著換成白天／夜間。</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="latin">★ BALL NEVER LANDS ★</span><span>球不落地</span>
+    <span class="latin">★ 2v2 / 3v3 ★</span><span>攤子一擺</span>
+    <span class="latin">★ WINNER STAYS ★</span><span>贏家留場</span>
+    <span class="latin">★ ANY HARD COURT ★</span><span>硬地開打</span>
+    <span class="latin">★ BALL NEVER LANDS ★</span><span>球不落地</span>
+    <span class="latin">★ 2v2 / 3v3 ★</span><span>攤子一擺</span>
+    <span class="latin">★ WINNER STAYS ★</span><span>贏家留場</span>
+    <span class="latin">★ ANY HARD COURT ★</span><span>硬地開打</span>
+  </div>
+</div>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about" class="section">
+  <div class="wrap">
+    <p class="section-num latin">01</p>
+    <h2 class="section-title" data-i18n="about.title">什麼是地攤排球</h2>
+    <p class="section-lead" data-i18n="about.lead">地攤排球（Bulleyball）是一種把沙灘排球的編制、街頭鬥牛的節奏，搬到你家附近那塊硬地上的排球玩法。它不需要沙、不需要包場、不需要湊滿兩隊 12 個人。</p>
+
+    <div class="cards three">
+      <article class="card">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="48" height="48" shape-rendering="crispEdges">
+            <rect x="1" y="10" width="14" height="4" fill="var(--c-court)"/>
+            <rect x="7" y="3" width="2" height="8" fill="var(--ink)"/>
+            <rect x="3" y="3" width="10" height="1" fill="var(--ink)"/>
+            <circle cx="4" cy="7" r="2" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <h3 data-i18n="about.c1.h">沙排的編制</h3>
+        <p data-i18n="about.c1.p">兩個人守一整個半場，沒有自由球員、沒有輪轉掩護。每一球都是赤裸裸的個人基本功與意志力。</p>
+      </article>
+      <article class="card">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="48" height="48" shape-rendering="crispEdges">
+            <rect x="2" y="2" width="12" height="12" fill="none" stroke="var(--ink)" stroke-width="1"/>
+            <rect x="4" y="4" width="3" height="3" fill="var(--accent)"/>
+            <rect x="9" y="9" width="3" height="3" fill="var(--accent-2)"/>
+            <rect x="7" y="7" width="2" height="2" fill="var(--ink)"/>
+          </svg>
+        </div>
+        <h3 data-i18n="about.c2.h">鬥牛的節奏</h3>
+        <p data-i18n="about.c2.p">像籃球場邊報隊一樣：搶分制、贏家留場、輸的下場換下一隊。快節奏、高對抗，一場打完直接攤在地上。</p>
+      </article>
+      <article class="card">
+        <div class="card-ico" aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="48" height="48" shape-rendering="crispEdges">
+            <rect x="1" y="11" width="14" height="3" fill="var(--c-court)"/>
+            <rect x="1" y="11" width="14" height="1" fill="var(--line)"/>
+            <rect x="5" y="5" width="2" height="6" fill="var(--ink)"/>
+            <rect x="9" y="7" width="2" height="4" fill="var(--ink)"/>
+            <circle cx="10" cy="4" r="2" fill="var(--accent-2)"/>
+          </svg>
+        </div>
+        <h3 data-i18n="about.c3.h">硬地的粗礪</h3>
+        <p data-i18n="about.c3.p">水泥地、磨石子、PU 場——沒有沙可以緩衝。要不要撲救、怎麼落地，都是你和地面之間的談判。</p>
+      </article>
+    </div>
+
+    <div class="name-story">
+      <h3 class="sub-title" data-i18n="about.name.title">兩個名字，一個意思</h3>
+      <div class="cards two">
+        <article class="card accent">
+          <p class="kicker latin">EN</p>
+          <h4 class="latin big">Bulleyball</h4>
+          <p data-i18n="about.name.en">取自籃球的「鬥牛」（bully ball）與 volleyball 的合體。小編制、硬碰硬、靠體能與意志輾過對手；四個人在半場裡像被激怒的公牛一樣衝撞、飛撲、喘息。</p>
+        </article>
+        <article class="card accent-2">
+          <p class="kicker">中文</p>
+          <h4 class="big">地攤排球</h4>
+          <p data-i18n="about.name.zh">「地」是硬地肉搏，不是度假風的沙灘；「攤」是隨處擺攤，抓到空場攤子一擺就開打，收攤換下一組。打完兩個人都攤在地上——名字就是這樣來的。</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="spirit">
+      <h3 class="sub-title" data-i18n="about.spirit.title">核心精神</h3>
+      <ol class="spirit-list">
+        <li>
+          <span class="spirit-num latin">01</span>
+          <div>
+            <h4 data-i18n="about.s1.h">球不落地</h4>
+            <p data-i18n="about.s1.p">這是唯一的信條。人數再少、場地再爛、體力再空，球在空中，比賽就還沒結束。</p>
+          </div>
+        </li>
+        <li>
+          <span class="spirit-num latin">02</span>
+          <div>
+            <h4 data-i18n="about.s2.h">一般場地就能競技</h4>
+            <p data-i18n="about.s2.p">不必等沙、不必包場。標準排球場、學校操場邊、社區活動中心，只要有網、有線，就是我們的主場。</p>
+          </div>
+        </li>
+        <li>
+          <span class="spirit-num latin">03</span>
+          <div>
+            <h4 data-i18n="about.s3.h">報隊，人人有球打</h4>
+            <p data-i18n="about.s3.p">贏家留場、輸家排隊、陌生人湊隊。降低門檻，讓「今天沒揪到人」不再是不能打球的理由。</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ RULES ══════════════ -->
+<section id="rules" class="section alt">
+  <div class="wrap">
+    <p class="section-num latin">02</p>
+    <h2 class="section-title" data-i18n="rules.title">怎麼玩</h2>
+    <p class="section-lead" data-i18n="rules.lead">規則只有一個目的：讓四個人在一般場地上，打出比六人制更兇的來回。以下是社群共用的規則草案，歡迎一起修訂。</p>
+    <p class="badge" data-i18n="rules.badge">規則草案 v0.1 ・ 開放社群共議</p>
+
+    <div class="rules-grid">
+      <div class="court-diagram">
+        <svg viewBox="0 0 200 120" role="img" data-i18n-attr="aria-label:a11y.diagram" aria-label="地攤排球場地示意圖" shape-rendering="crispEdges">
+          <rect x="0" y="0" width="200" height="120" fill="var(--c-ground)"/>
+          <rect x="10" y="15" width="180" height="90" fill="var(--c-court)"/>
+          <rect x="70" y="15" width="60" height="90" fill="var(--c-zone)"/>
+          <g fill="var(--line)">
+            <rect x="10" y="15" width="180" height="2"/>
+            <rect x="10" y="103" width="180" height="2"/>
+            <rect x="10" y="15" width="2" height="90"/>
+            <rect x="188" y="15" width="2" height="90"/>
+            <rect x="70" y="15" width="2" height="90"/>
+            <rect x="128" y="15" width="2" height="90"/>
+          </g>
+          <g fill="var(--ink)">
+            <rect x="98" y="8" width="4" height="104"/>
+          </g>
+          <g fill="var(--ink)" opacity="0.85">
+            <rect x="99" y="12" width="2" height="96"/>
+          </g>
+          <rect x="92" y="15" width="16" height="90" fill="url(#netpat)" opacity="0.55"/>
+          <defs>
+            <pattern id="netpat" width="4" height="4" patternUnits="userSpaceOnUse">
+              <rect width="4" height="4" fill="none"/>
+              <rect width="1" height="4" fill="var(--ink)"/>
+              <rect width="4" height="1" fill="var(--ink)"/>
+            </pattern>
+          </defs>
+          <g class="diagram-players">
+            <g fill="var(--accent)">
+              <rect x="28" y="38" width="7" height="12"/><rect x="40" y="72" width="7" height="12"/>
+            </g>
+            <g fill="var(--c-skin)">
+              <rect x="29" y="33" width="5" height="5"/><rect x="41" y="67" width="5" height="5"/>
+            </g>
+            <g fill="var(--accent-3)">
+              <rect x="158" y="42" width="7" height="12"/><rect x="148" y="74" width="7" height="12"/>
+            </g>
+            <g fill="var(--c-skin)">
+              <rect x="159" y="37" width="5" height="5"/><rect x="149" y="69" width="5" height="5"/>
+            </g>
+          </g>
+          <circle cx="150" cy="30" r="4" fill="var(--accent-2)" stroke="var(--ink)" stroke-width="1"/>
+        </svg>
+        <ul class="legend">
+          <li><i class="sw court"></i><span data-i18n="rules.legend1">得分區（球落此處得分）</span></li>
+          <li><i class="sw zone"></i><span data-i18n="rules.legend2">三米前區＝出界區（攔網除外）</span></li>
+          <li><i class="sw net"></i><span data-i18n="rules.legend3">球網</span></li>
+        </ul>
+      </div>
+
+      <ol class="rule-list">
+        <li>
+          <h3><span class="latin">01</span> <span data-i18n="rules.r1.h">場地與人數</span></h3>
+          <p data-i18n="rules.r1.p">使用一般 18×9 公尺排球場，全場照打。2v2 用沙排的攻守思維；3v3 更接近鬥牛的空間感。網高沿用現場既有設定即可，重點是四個人先打起來。</p>
+        </li>
+        <li class="highlight">
+          <h3><span class="latin">02</span> <span data-i18n="rules.r2.h">三米線內落地算出界</span></h3>
+          <p data-i18n="rules.r2.p">這是地攤排球唯一的核心改動。球若落在對方三米線（前區）以內，判出界、對方得分——除非該球碰過攔網。這條規則逼所有人把球送到底線，也讓吊小球與擦網僥倖球失效。</p>
+        </li>
+        <li>
+          <h3><span class="latin">03</span> <span data-i18n="rules.r3.h">攔網例外</span></h3>
+          <p data-i18n="rules.r3.p">經攔網觸碰後落在三米線內的球，算好球、算得分。敢攔就有回報——這讓網前的正面對決重新變得值得。</p>
+        </li>
+        <li>
+          <h3><span class="latin">04</span> <span data-i18n="rules.r4.h">觸球與得分</span></h3>
+          <p data-i18n="rules.r4.p">每邊最多三次觸球，攔網觸球不計入；每球得分制。建議搶 11 分（需領先 2 分），時間充裕就打 15 分。發球權隨得分轉移。</p>
+        </li>
+        <li>
+          <h3><span class="latin">05</span> <span data-i18n="rules.r5.h">報隊與換場</span></h3>
+          <p data-i18n="rules.r5.p">贏家留場，輸家下場排隊等下一輪；連勝三場強制換邊休息一局，把場地讓給還沒打到的人。這條是禮貌，也是規則。</p>
+        </li>
+        <li>
+          <h3><span class="latin">06</span> <span data-i18n="rules.r6.h">自己吹自己的球</span></h3>
+          <p data-i18n="rules.r6.p">沒有裁判。界內界外由落點最近的一方認定，有爭議就重發。街頭球場的誠實，是這項運動能不能長大的關鍵。</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="safety">
+      <h3 class="sub-title" data-i18n="rules.safety.title">硬地安全守則</h3>
+      <p data-i18n="rules.safety.p">硬地沒有沙可以吃掉衝擊力。開打前請確認：場地無碎石與積水、穿有支撐的室外球鞋、建議配戴護膝與護肘、先做足踝與肩部熱身。撲救前先想好落地方式；累到動作變形時，休息比多撿一球重要。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PROGRAMS ══════════════ -->
+<section id="programs" class="section">
+  <div class="wrap">
+    <p class="section-num latin">03</p>
+    <h2 class="section-title" data-i18n="prog.title">我們在做的事</h2>
+    <p class="section-lead" data-i18n="prog.lead">地攤排球運動推廣俱樂部是一個非營利的推廣團體。我們不辦選拔、不收會員費當門檻，只做一件事：讓更多人在住家附近就能打到球。</p>
+
+    <div class="cards three">
+      <article class="card"><h3 data-i18n="prog.p1.h">週末開放場</h3><p data-i18n="prog.p1.p">固定時段的免費開放球場，現場報隊、不需事先組隊。一個人來也打得到球。</p></article>
+      <article class="card"><h3 data-i18n="prog.p2.h">零基礎入門課</h3><p data-i18n="prog.p2.p">兩小時把發球、接一、舉球走過一遍，當天就能下場對打。不會打球的人才是我們的主要客群。</p></article>
+      <article class="card"><h3 data-i18n="prog.p3.h">器材出借</h3><p data-i18n="prog.p3.p">可攜式球網、球、標線、護具的免費出借，讓任何一塊空地在十分鐘內變成球場。</p></article>
+      <article class="card"><h3 data-i18n="prog.p4.h">校園與社區推廣</h3><p data-i18n="prog.p4.p">帶著器材進學校、社區與企業，用一節課的時間示範這項運動有多低門檻。</p></article>
+      <article class="card"><h3 data-i18n="prog.p5.h">街頭巡迴賽</h3><p data-i18n="prog.p5.p">在公園、學校與街區辦報隊制小型賽事，冠軍不是重點，讓球場被看見才是。</p></article>
+      <article class="card"><h3 data-i18n="prog.p6.h">開源規則共創</h3><p data-i18n="prog.p6.p">規則書公開維護，任何人都能提出修訂。這項運動屬於打它的人，不屬於任何組織。</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ JOIN ══════════════ -->
+<section id="join" class="section alt">
+  <div class="wrap">
+    <p class="section-num latin">04</p>
+    <h2 class="section-title" data-i18n="join.title">怎麼參與</h2>
+    <p class="section-lead" data-i18n="join.lead">四種身分，選一個開始。全部都不需要任何排球經驗。</p>
+
+    <div class="cards four">
+      <article class="card path"><span class="path-num latin">A</span><h3 data-i18n="join.j1.h">來打球</h3><p data-i18n="join.j1.p">帶一雙球鞋和一瓶水，直接到開放場報隊。第一次來的人，我們會安排人帶你打。</p></article>
+      <article class="card path"><span class="path-num latin">B</span><h3 data-i18n="join.j2.h">當志工</h3><p data-i18n="join.j2.p">場地佈置、器材搬運、活動紀錄、社群經營、翻譯。每個月兩小時也算數。</p></article>
+      <article class="card path"><span class="path-num latin">C</span><h3 data-i18n="join.j3.h">提供場地</h3><p data-i18n="join.j3.p">學校、社區、企業或私人球場有閒置時段？借我們幾個小時，我們自備器材與保險。</p></article>
+      <article class="card path"><span class="path-num latin">D</span><h3 data-i18n="join.j4.h">成為夥伴</h3><p data-i18n="join.j4.p">器材贊助、場租支持、活動協辦。我們會把每一分資源用在哪裡都寫清楚。</p></article>
+    </div>
+
+    <div class="cta-box">
+      <p data-i18n="join.cta.p">想開始的話，寫一封信給我們就好——不用自我介紹得很正式，一句「我想打球」就夠了。</p>
+      <a class="pixel-btn primary" id="join-mail" href="mailto:hello@bulleyball.club?subject=I%20want%20to%20play%20Bulleyball" data-i18n="join.cta.btn">寫信給我們</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SUPPORT ══════════════ -->
+<section id="support" class="section">
+  <div class="wrap">
+    <p class="section-num latin">05</p>
+    <h2 class="section-title" data-i18n="sup.title">支持我們</h2>
+    <p class="section-lead" data-i18n="sup.lead">我們的支出很具體：球網、球、標線、護具、場地租金、活動保險。每一項都直接變成有人打到球。</p>
+
+    <div class="cards three">
+      <article class="card price">
+        <p class="amount latin">NT$500</p>
+        <h3 data-i18n="sup.t1.h">一顆球</h3>
+        <p data-i18n="sup.t1.p">一顆室外用球，可以撐過一整季的開放場。</p>
+      </article>
+      <article class="card price">
+        <p class="amount latin">NT$2,000</p>
+        <h3 data-i18n="sup.t2.h">一場開放場</h3>
+        <p data-i18n="sup.t2.p">支付一次三小時開放場的場租與保險，約可容納 20 人次。</p>
+      </article>
+      <article class="card price">
+        <p class="amount latin">NT$6,000</p>
+        <h3 data-i18n="sup.t3.h">一套行動球網</h3>
+        <p data-i18n="sup.t3.p">一組可攜式球網與標線，等於多開一個長期據點。</p>
+      </article>
+    </div>
+
+    <div class="transparency">
+      <h3 class="sub-title" data-i18n="sup.gov.title">治理與透明</h3>
+      <ul class="gov-list">
+        <li><b data-i18n="sup.gov.g1.h">非營利性質</b><span data-i18n="sup.gov.g1.p">所有收入僅用於推廣活動與器材，不分配盈餘。</span></li>
+        <li><b data-i18n="sup.gov.g2.h">年度公開</b><span data-i18n="sup.gov.g2.p">每年公布活動場次、參與人次與收支摘要。</span></li>
+        <li><b data-i18n="sup.gov.g3.h">開放規則</b><span data-i18n="sup.gov.g3.p">規則書與教材以開放授權釋出，任何人可自由使用。</span></li>
+        <li><b data-i18n="sup.gov.g4.h">立案狀態</b><span data-i18n="sup.gov.g4.p">組織目前為籌備階段，法人立案資訊待補（TBD）。</span></li>
+      </ul>
+      <p class="note" data-i18n="sup.note">※ 捐款方式與收據流程建置中。在正式帳戶公告前，請先來信洽詢，我們不會在網站上放未確認的匯款資訊。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq" class="section alt">
+  <div class="wrap">
+    <p class="section-num latin">06</p>
+    <h2 class="section-title" data-i18n="faq.title">常見問題</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary data-i18n="faq.q1">完全沒打過排球，可以來嗎？</summary>
+        <p data-i18n="faq.a1">可以，而且這正是我們存在的理由。2v2 每個人碰球的機會極多，進步速度比六人制快得多。第一次來會有人帶你，從接球開始。</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q2">需要準備什麼裝備？</summary>
+        <p data-i18n="faq.a2">一雙有支撐的室外球鞋、一瓶水。建議自備護膝與護肘，硬地撲救時很有用。球與網我們準備。</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q3">跟沙灘排球差在哪？</summary>
+        <p data-i18n="faq.a3">場地是硬地，移動更快、彈跳更高、來回節奏更兇；沒有沙的緩衝，撲救的代價更高。加上三米線出界規則，戰術重心整個往後場移。</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q4">為什麼三米線內算出界？</summary>
+        <p data-i18n="faq.a4">兩個人守全場，如果允許吊小球，比賽會變成互相吊球的消耗戰。把落點推到後場，才會出現長距離救球、強力發球與正面攔網——也就是最好看的部分。</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q5">沒有球網怎麼辦？</summary>
+        <p data-i18n="faq.a5">可以借用我們的可攜式球網。臨時場合也有人用繩子、羽球網甚至一條膠帶標記高度——場地將就，規則不將就。</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q6">要收費嗎？</summary>
+        <p data-i18n="faq.a6">開放場與入門課免費。部分需要租借場地的活動會酌收分攤費用，金額會事先公告。</p>
+      </details>
+      <details class="faq-item">
+        <summary data-i18n="faq.q7">可以在我的城市／學校辦一場嗎？</summary>
+        <p data-i18n="faq.a7">可以。來信告訴我們地點與大概人數，我們協助器材、規則說明與現場帶隊。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact" class="section">
+  <div class="wrap contact-wrap">
+    <div>
+      <p class="section-num latin">07</p>
+      <h2 class="section-title" data-i18n="contact.title">聯絡我們</h2>
+      <p class="section-lead" data-i18n="contact.lead">開放場資訊、合作提案、規則討論，都歡迎直接來信。我們通常兩到三個工作天內回覆。</p>
+      <ul class="contact-list">
+        <li><b data-i18n="contact.email">電子郵件</b><a href="mailto:hello@bulleyball.club" class="latin">hello@bulleyball.club</a></li>
+        <li><b data-i18n="contact.area">主要活動區域</b><span data-i18n="contact.area.v">台灣（待補：固定據點）</span></li>
+        <li><b data-i18n="contact.social">社群</b><span data-i18n="contact.social.v">籌備中（待補）</span></li>
+      </ul>
+    </div>
+    <div class="contact-card">
+      <h3 data-i18n="contact.box.h">下一場開放場</h3>
+      <p class="big-date latin">TBD</p>
+      <p data-i18n="contact.box.p">場次確定後會公告於此。想收到通知，來信寫「開放場」三個字，我們會把你加進名單。</p>
+      <a class="pixel-btn primary" href="mailto:hello@bulleyball.club?subject=Open%20Court%20Notify" data-i18n="contact.box.btn">加入通知名單</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand"><b class="latin">BULLEYBALL</b> <span data-i18n="footer.org">地攤排球運動推廣俱樂部</span></p>
+      <p class="footer-slogan" data-i18n="hero.slogan">攤子一擺，球不落地。</p>
+    </div>
+    <nav class="footer-nav" data-i18n-attr="aria-label:a11y.footernav">
+      <a href="#about" data-i18n="nav.about">介紹</a>
+      <a href="#rules" data-i18n="nav.rules">規則</a>
+      <a href="#programs" data-i18n="nav.programs">我們在做的事</a>
+      <a href="#join" data-i18n="nav.join">參與</a>
+      <a href="#contact" data-i18n="nav.contact">聯絡</a>
+    </nav>
+    <p class="copy latin">© <span id="year">2026</span> Bulleyball Club</p>
+  </div>
+</footer>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/court3d.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
