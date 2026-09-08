@@ -268,6 +268,8 @@ a { color: inherit; }
 
 /* ---------- cards ---------- */
 .cards { display: grid; gap: 1.4rem; margin-top: 2rem; }
+/* the naming pair lost its sub-heading, so it needs its own separation */
+.name-story { margin-top: 2.8rem; }
 .cards.two   { grid-template-columns: repeat(2, 1fr); }
 .cards.three { grid-template-columns: repeat(3, 1fr); }
 .cards.four  { grid-template-columns: repeat(4, 1fr); }
