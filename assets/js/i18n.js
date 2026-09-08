@@ -46,7 +46,7 @@ window.BB_I18N = {
     "stage.dink": "吊球",
     "stage.block": "攔網",
     "stage.out": "落在三米線內──出界",
-    "stage.point": "碰到攔網──攔網除外，不算出界",
+    "stage.point": "落在三米線內──攔網除外，不算出界",
 
     "about.title": "為什麼要有鬥牛排球",
     "about.c1.h": "籃球有鬥牛",
@@ -170,7 +170,7 @@ window.BB_I18N = {
     "stage.dink": "DINK",
     "stage.block": "BLOCK",
     "stage.out": "Inside the 3 m line — out",
-    "stage.point": "Off the block — the exception applies, not out",
+    "stage.point": "Inside the 3 m line — block exception, not out",
 
     "about.title": "Why Bulleyball exists",
     "about.c1.h": "Basketball has pick-up",
