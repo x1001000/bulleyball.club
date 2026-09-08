@@ -226,58 +226,38 @@
   };
 
   /* -------------------------------------------------- rally script
-     Six a side, standard positions. The point is won on the one rule
-     that makes this Bulleyball: A2's spike is blocked, the ball drops
-     inside Team B's 3 m front zone, and because it came off a block it
-     counts instead of being called out.                              */
+     2v2 on a full 18 x 9 m court. The point is won on the one rule that
+     makes this Bulleyball: A2's spike is blocked, the ball drops inside
+     Team B's 3 m front zone, and because it came off a block it counts
+     instead of being called out.                                       */
   var LOOP = 12.4;
   var NODES = [
-    { t: 0.00, p: [-9.80, 2.15,  0.00], act: "A5", cap: "serve", arc: 0.0 },
-    { t: 1.80, p: [ 6.60, 0.85, -2.60], act: "B4", cap: "dig",   arc: 3.2 },
-    { t: 3.00, p: [ 2.40, 2.35,  0.50], act: "B1", cap: "set",   arc: 3.2 },
-    { t: 4.30, p: [ 1.20, 3.20, -2.50], act: "B2", cap: "spike", arc: 1.4 },
-    { t: 5.20, p: [-5.80, 0.70,  2.40], act: "A4", cap: "dig",   arc: 0.25 },
-    { t: 6.40, p: [-2.40, 2.35, -0.50], act: "A1", cap: "set",   arc: 3.0 },
-    { t: 7.50, p: [-1.20, 3.25,  2.60], act: "A2", cap: "spike", arc: 1.4 },
-    { t: 7.95, p: [ 0.35, 3.15,  2.50], act: "B1", cap: "block", arc: 0.2 },
-    { t: 9.00, p: [ 2.40, 0.11,  2.10], act: null, cap: "point", arc: 0.9 },
-    { t: 9.50, p: [ 2.90, 0.11,  2.00], act: null, cap: "point", arc: 0.25 },
-    { t: 10.0, p: [ 3.15, 0.11,  1.95], act: null, cap: "point", arc: 0.1 }
+    { t: 0.0, p: [-9.7, 2.15, -1.2], act: "A1", cap: "serve", arc: 3.0 },
+    { t: 1.75, p: [6.3, 0.85, 2.45], act: "B2", cap: "dig", arc: 3.4 },
+    { t: 2.95, p: [3.0, 2.25, -0.45], act: "B1", cap: "set", arc: 1.5 },
+    { t: 4.35, p: [1.35, 3.15, 0.6], act: "B2", cap: "spike", arc: 0.35 },
+    { t: 5.2, p: [-5.3, 0.7, -1.75], act: "A2", cap: "dig", arc: 3.2 },
+    { t: 6.45, p: [-2.85, 2.3, 0.4], act: "A1", cap: "set", arc: 1.5 },
+    { t: 7.55, p: [-1.3, 3.2, 1.2], act: "A2", cap: "spike", arc: 0.25 },
+    { t: 8.0, p: [0.32, 3.1, 1.28], act: "B1", cap: "block", arc: 0.8 },
+    { t: 9.05, p: [2.15, 0.11, 1.0], act: null, cap: "point", arc: 0.35 },
+    { t: 9.55, p: [2.75, 0.11, 0.92], act: null, cap: "point", arc: 0.0 },
+    { t: 10.1, p: [3.05, 0.11, 0.88], act: null, cap: "point", arc: 0.0 }
   ];
 
-  /* per-player movement keyframes: [t, x, z, jumpHeight]
-     A1/B1 setter (right pin) · A2/B2 outside hitter · A3/B3 middle blocker
-     A4-A6 / B4-B6 back row (A5 serves)                                  */
+  /* hand-authored player keyframes: [t, x, z, jumpHeight] */
   var KEYS = {
-    A1: [[0.0, -2.7, -2.9, 0], [3.6, -1.1, -2.7, 0], [4.3, -0.55, -2.5, 0.72],
-         [5.3, -1.6, -2.4, 0], [6.4, -2.4, -0.5, 0], [7.6, -3.0, -1.3, 0],
-         [10.8, -2.7, -2.9, 0]],
-    A2: [[0.0, -2.7, 3.0, 0], [4.3, -3.3, 3.2, 0], [6.5, -3.8, 3.5, 0],
-         [7.5, -1.2, 2.6, 0.92], [8.5, -2.3, 2.9, 0], [10.8, -2.7, 3.0, 0]],
-    A3: [[0.0, -2.7, 0.0, 0], [3.8, -1.0, -1.4, 0], [4.3, -0.55, -1.3, 0.68],
-         [5.4, -1.8, -0.7, 0], [7.5, -2.0, 1.1, 0], [10.8, -2.7, 0.0, 0]],
-    A4: [[0.0, -7.2, 3.0, 0], [4.3, -6.4, 2.8, 0], [5.2, -5.8, 2.4, 0],
-         [6.6, -6.6, 2.8, 0], [10.8, -7.2, 3.0, 0]],
-    A5: [[0.0, -9.8, 0.0, 0.35], [2.0, -7.4, 0.3, 0], [4.3, -6.7, -0.4, 0],
-         [7.5, -6.2, 0.4, 0], [10.8, -7.2, 0.0, 0]],
-    A6: [[0.0, -7.2, -3.0, 0], [4.3, -6.2, -2.6, 0], [6.2, -6.8, -2.2, 0],
-         [10.8, -7.2, -3.0, 0]],
-    B1: [[0.0, 2.7, 2.9, 0], [2.0, 2.6, 2.2, 0], [3.0, 2.4, 0.5, 0],
-         [4.6, 2.6, 1.8, 0], [7.4, 0.7, 2.5, 0], [7.95, 0.5, 2.5, 0.75],
-         [8.9, 1.5, 2.6, 0], [10.8, 2.7, 2.9, 0]],
-    B2: [[0.0, 2.7, -3.0, 0], [2.6, 3.5, -3.3, 0], [4.3, 1.2, -2.5, 0.92],
-         [5.3, 2.4, -2.9, 0], [7.7, 1.9, -1.5, 0], [10.8, 2.7, -3.0, 0]],
-    B3: [[0.0, 2.7, 0.0, 0], [3.2, 2.4, -0.9, 0], [7.5, 0.9, 1.3, 0],
-         [7.95, 0.6, 1.25, 0.7], [8.9, 1.7, 0.8, 0], [10.8, 2.7, 0.0, 0]],
-    B4: [[0.0, 7.2, -3.0, 0], [1.8, 6.6, -2.6, 0], [3.4, 7.0, -2.9, 0],
-         [7.9, 6.2, -2.4, 0], [10.8, 7.2, -3.0, 0]],
-    B5: [[0.0, 7.2, 0.0, 0], [2.2, 6.6, 0.4, 0], [7.9, 6.0, 0.6, 0],
-         [10.8, 7.2, 0.0, 0]],
-    B6: [[0.0, 7.2, 3.0, 0], [2.4, 6.6, 2.6, 0], [7.9, 6.2, 2.6, 0],
-         [10.8, 7.2, 3.0, 0]]
+    A1: [[0.0, -9.7, -1.2, 0.45], [1.6, -6.2, -1.5, 0], [4.35, -4.2, -1.0, 0],
+         [6.45, -2.85, 0.4, 0], [7.7, -3.7, 0.0, 0], [10.4, -6.5, -2.2, 0]],
+    A2: [[0.0, -6.0, 2.0, 0], [3.0, -5.0, 1.0, 0], [5.2, -5.3, -1.75, 0],
+         [7.55, -1.3, 1.2, 0.9], [8.6, -2.2, 1.2, 0], [10.6, -6.5, 2.2, 0]],
+    B1: [[0.0, 6.5, -2.2, 0], [2.95, 3.0, -0.45, 0], [4.4, 4.2, -0.9, 0],
+         [8.0, 0.55, 1.28, 0.78], [8.8, 1.3, 1.1, 0], [10.6, 6.5, -2.2, 0]],
+    B2: [[0.0, 6.5, 2.2, 0], [1.75, 6.3, 2.45, 0], [3.3, 3.6, 1.6, 0],
+         [4.35, 1.35, 0.6, 0.92], [5.4, 2.7, 0.8, 0], [8.0, 3.2, 1.6, 0],
+         [10.6, 6.5, 2.2, 0]]
   };
-  var IDS = ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "B5", "B6"];
-  function team(id) { return id.charAt(0); }
+  var TEAM = { A1: "A", A2: "A", B1: "B", B2: "B" };
 
   function ballAt(t) {
     var i, n = NODES.length;
@@ -442,7 +422,7 @@
       this.lamps.push([m[0], 8.4, m[1]]);
     }
 
-    /* --- courtside bench and referee stand --- */
+    /* --- courtside bench --- */
     var bx = -7.2, bz = -8.8;
     this.box([bx, 0.44, bz], [4.2, 0.12, 0.5], 0, 0, p.trunk, 10);
     this.box([bx, 0.72, bz - 0.26], [4.2, 0.46, 0.1], 0, 0, p.trunk, 10);
@@ -451,8 +431,6 @@
         [0.1, 0.44, 0.1], 0, 0, p.post, 10);
     }
     this.box([bx + 2.7, 0.2, bz + 0.5], [0.62, 0.4, 0.4], 0, 0, p.teamA, 10);
-    this.box([0, 1.15, -COURT_Z - 1.3], [0.46, 2.3, 0.46], 0, 0, p.post, 10);
-    this.box([0, 2.36, -COURT_Z - 1.3], [0.95, 0.12, 0.95], 0, 0, p.trunk, 10);
 
     /* --- net --- */
     this.box([0, 1.35, -COURT_Z - 0.55], [0.16, 2.7, 0.16], 0, 0, p.post, 10);
@@ -475,7 +453,8 @@
 
     /* --- players --- */
     var ball = ballAt(t);
-    for (i = 0; i < IDS.length; i++) this.drawPlayer(IDS[i], t, ball);
+    var ids = ["A1", "A2", "B1", "B2"];
+    for (i = 0; i < ids.length; i++) this.drawPlayer(ids[i], t, ball);
 
     /* --- ball + shadow --- */
     this.rect(ball[0] - 0.18, ball[0] + 0.18, ball[2] - 0.18, ball[2] + 0.18, 0.05,
@@ -488,7 +467,7 @@
     var pos = playerAt(id, t);
     var jy = jumpAt(id, t);
     var arm = armAt(id, t);
-    var col = team(id) === "A" ? p.teamA : p.teamB;
+    var col = TEAM[id] === "A" ? p.teamA : p.teamB;
     var yaw = Math.atan2(ball[0] - pos.x, ball[2] - pos.z);
     var speed = clamp(pos.v, 0, 3.4);
     var step = Math.sin(t * 9 + id.charCodeAt(1)) * speed * 0.10;
@@ -546,7 +525,7 @@
 
     /* orbiting camera */
     var th = 0.28 * Math.sin(this.time * 0.075) + 0.14;
-    var dist = 19.5, hgt = 7.2;
+    var dist = 20.0, hgt = 7.4;
     var eye = [Math.sin(th) * dist, hgt + Math.sin(this.time * 0.11) * 0.45, Math.cos(th) * dist];
     this.setCamera(eye, [0, 1.05, 0]);
 
@@ -672,8 +651,8 @@
     /* deterministic seek — used by the visual tests */
     seek: function (t) { if (stage) { stage.time = t % LOOP; stage.updateCaption(); stage.render(); } },
     playerPositions: function (t) {
-      var out = {}, i;
-      for (i = 0; i < IDS.length; i++) out[IDS[i]] = playerAt(IDS[i], t);
+      var out = {}, ids = ["A1", "A2", "B1", "B2"], i;
+      for (i = 0; i < ids.length; i++) out[ids[i]] = playerAt(ids[i], t);
       return { players: out, ball: ballAt(t) };
     },
     setPlaying: function (v) { wanted = !!v; },
