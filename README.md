@@ -79,17 +79,29 @@ whole scene runs at ~60 fps.
 
 The point is choreographed by two tables in `court3d.js`:
 
-- `NODES` — every ball contact: time, position, which player touches it, and the caption key.
-  The ball follows a parabola between consecutive nodes (`arc` sets how high the incoming
-  segment flies).
+- `NODES` — every ball contact: time, position, which player touches it, the caption key, and
+  `pt` on the two nodes that decide a point. The ball follows a parabola between consecutive
+  nodes (`arc` sets how high the incoming segment flies).
 - `KEYS` — per-player movement keyframes `[time, x, z, jumpHeight]`, eased between.
 
 Positions are metres on a real 18 × 9 m court, net at `x = 0`, 3 m lines at `x = ±3`. Four players:
 `A1`/`A2` and `B1`/`B2`.
 
-The scripted point runs serve → dig → set → spike → dig → set → spike → **block**, and the
-deflected ball drops inside Team B's 3 m front zone: out under the base rule, good under the block
-exception. `BBCourt.seek(t)` jumps to any moment, which is how each beat was checked.
+The loop is **two points that land in the same place and are judged differently** — which is the
+whole rule in one animation:
+
+1. B dinks into A's front zone and nobody blocks it. Inside the 3 m line is out, so the attacker
+   loses the rally: **point A**.
+2. A attacks, B blocks it straight back down, and it lands in A's front zone again. This one
+   touched a block, so the exception applies and it is not out: **point B**.
+
+Between the points a player picks the ball up and lobs it to whoever serves next, so the ball
+never teleports across the loop, and the last node's position equals the first node's.
+
+`BBCourt.seek(t)` jumps to any moment, which is how each beat was checked. The choreography is
+also audited numerically: every actor is within 0.35 m of the ball at their contact, the ball
+clears the 2.43 m net on all six crossings, teammates never come within a metre of each other, and
+no defender is within 1.5 m of either dead ball.
 
 ## Editing the copy
 

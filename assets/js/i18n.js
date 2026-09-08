@@ -44,7 +44,8 @@ window.BB_I18N = {
     "stage.set": "舉球",
     "stage.spike": "扣球",
     "stage.block": "攔網",
-    "stage.point": "得分！攔網除外——落在三米線內也算數",
+    "stage.out": "落在三米線內──出界",
+    "stage.point": "碰到攔網──攔網除外，不算出界",
 
     "about.title": "為什麼要有鬥牛排球",
     "about.c1.h": "籃球有鬥牛",
@@ -166,7 +167,8 @@ window.BB_I18N = {
     "stage.set": "SET",
     "stage.spike": "SPIKE",
     "stage.block": "BLOCK",
-    "stage.point": "POINT! Block exception — the front zone still counts",
+    "stage.out": "Inside the 3 m line — out",
+    "stage.point": "Off the block — the exception applies, not out",
 
     "about.title": "Why Bulleyball exists",
     "about.c1.h": "Basketball has pick-up",
