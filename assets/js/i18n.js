@@ -129,7 +129,7 @@ window.BB_I18N = {
 
   en: {
     "meta.title": "Bulleyball 鬥牛排球 | Bulleyball Club",
-    "meta.desc": "Bulleyball: 2v2 or 3v3 on a full standard court, played under the indoor six-a-side rulebook with one change — a ball landing inside the 3 m line is out, unless it came off a successful block. While the ball is up, I am free.",
+    "meta.desc": "Bulleyball: 2v2 or 3v3 on a full standard court, played under the indoor six-a-side rulebook with one change — a ball landing inside the 3 m line is out, unless it came off a successful block. Ball's alive. I'm free.",
 
     "a11y.skip": "Skip to main content",
     "a11y.menu": "Toggle menu",
@@ -153,7 +153,7 @@ window.BB_I18N = {
 
     "hero.eyebrow": "BULLEYBALL CLUB · A RULE PROPOSAL",
     "hero.sub": "\"NIU-PAI\" FOR SHORT",
-    "hero.slogan": "While the ball is up, I\u2019m free.",
+    "hero.slogan": "Ball's alive. I'm free.",
     "hero.lead": "Basketball grew a pick-up format out of the full-court game. Why not volleyball? Bulleyball is 2v2 or 3v3 on a full standard court, played under the indoor six-a-side rulebook, with exactly one thing changed: a ball landing inside the 3 m line is out — unless it came off a successful block.",
     "hero.cta1": "THE RULE",
     "hero.cta2": "TAKE PART",

@@ -243,7 +243,7 @@ a { color: inherit; }
 }
 .ticker-track {
   display: flex; gap: 2.5rem; width: max-content;
-  animation: slide 26s linear infinite;
+  animation: slide 34s linear infinite;
   font-weight: 900; font-size: .85rem; letter-spacing: .1em; white-space: nowrap;
 }
 .ticker-track .latin { font-size: .6rem; }
