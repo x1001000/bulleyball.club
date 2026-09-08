@@ -110,9 +110,25 @@ does need replacing:
 
 ## Deploying
 
-GitHub Pages from the default branch serves this directly; `CNAME` points at `bulleyball.club`.
-`.nojekyll` stops Jekyll from touching the asset folders. Any static host (Cloudflare Pages,
-Netlify) works with no configuration.
+Served by GitHub Pages from the `gh-pages` branch, root folder, live at
+**https://x1001000.github.io/bulleyball.club/**. `.nojekyll` stops Jekyll from touching the asset
+folders. Every asset path in `index.html` is relative, so the site works unchanged at a sub-path or
+at a domain root. Any static host (Cloudflare Pages, Netlify) works with no configuration.
+
+### When bulleyball.club is registered
+
+Three things change together, or social previews break:
+
+1. add a `CNAME` file at the repo root containing `bulleyball.club` — Pages reads it and sets the
+   custom domain (without owning the domain this file makes the site *unreachable*, since Pages
+   redirects the github.io URL to a name that doesn't resolve);
+2. point DNS at Pages — four A records for the apex (`185.199.108.153`, `.109.153`, `.110.153`,
+   `.111.153`) and a `CNAME` for `www` → `x1001000.github.io`;
+3. update `og:url` and `og:image` in `index.html` to the new origin. They are absolute because
+   scrapers don't reliably resolve relative URLs, which means they don't follow a domain move
+   on their own.
+
+Then tick **Enforce HTTPS** in Settings → Pages once the certificate issues.
 
 Google Fonts (`Press Start 2P`) is the only external request; the site degrades to a monospace
 stack if it's blocked.
