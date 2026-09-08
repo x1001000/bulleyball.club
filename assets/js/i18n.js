@@ -179,7 +179,7 @@ window.BB_I18N = {
     "about.c2.p": "Beach volleyball does have 2v2 — but the rules are strict, the courts are scarce, the sand takes upkeep. Hassle at every step.",
     "about.c3.h": "Fewer players, more freedom",
     "about.c3.p": "Two or three a side on a full 18 x 9 m court. With great power comes great responsibility. No bickering, just ball.",
-    "about.name.en": "Volleyball is only fun when it leaves you gasping.",
+    "about.name.en": "Volleyball is only fun when it leaves you gasping like a bullfighter.",
     "about.name.zh": "The Chinese name carries a pun that only works in Chinese.",
 
     "rules.title": "The rules",
