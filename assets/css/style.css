@@ -172,6 +172,12 @@ a { color: inherit; }
 [lang="en"] .hero-title .t-zh { display: none; }
 [lang="en"] .hero-title .t-en { font-size: clamp(1.5rem, 5.2vw, 3rem); }
 
+.hero-sub {
+  font-size: .95rem; font-weight: 700; color: var(--ink-2); letter-spacing: .1em;
+  margin: -.1em 0 1.1em;
+}
+[lang="en"] .hero-sub { font-size: .58rem; letter-spacing: .08em; }
+
 .hero-slogan { font-size: clamp(1.15rem, 2.6vw, 1.5rem); font-weight: 900; margin-bottom: .8em; }
 .hero-lead { color: var(--ink-2); max-width: 44ch; }
 .hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; margin: 1.6rem 0; }
@@ -213,11 +219,11 @@ a { color: inherit; }
 .scoreboard .team.b { color: var(--accent-3); }
 .scoreboard .score { min-width: 2ch; text-align: center; }
 .caption {
-  align-self: flex-start;
+  align-self: flex-start; max-width: 80%;
   background: var(--accent); color: #fff;
   border: 3px solid var(--edge);
-  padding: .35em .7em; font-weight: 900; font-size: clamp(.7rem, 1.7vw, .95rem);
-  letter-spacing: .06em;
+  padding: .35em .7em; font-weight: 900; font-size: clamp(.62rem, 1.4vw, .88rem);
+  letter-spacing: .04em; line-height: 1.45;
 }
 .stage-fallback {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
@@ -292,7 +298,6 @@ a { color: inherit; }
   background: var(--accent); color: #fff; border: 3px solid var(--edge);
   padding: .35em .6em; font-size: .6rem;
 }
-.card.price .amount { font-size: .95rem; color: var(--accent); margin-bottom: .6rem; }
 
 /* ---------- spirit list ---------- */
 .spirit-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.2rem; }
@@ -323,14 +328,7 @@ a { color: inherit; }
 .legend .sw.zone { background: var(--c-zone); }
 .legend .sw.net { background: var(--ink); }
 
-.rule-list { list-style: none; padding: 0; margin: 0; counter-reset: r; display: grid; gap: 1.1rem; }
-.rule-list li { border-left: 8px solid var(--ink-2); padding: .2rem 0 .2rem 1.2rem; }
-.rule-list li.highlight { border-left-color: var(--accent); background: var(--card); padding: 1.1rem 1.2rem; border: 4px solid var(--accent); box-shadow: 7px 7px 0 var(--shadow); }
-.rule-list h3 { font-size: 1.1rem; display: flex; gap: .7rem; align-items: baseline; margin-bottom: .35em; }
-[lang="en"] .rule-list h3 { font-size: .88rem; }
-.rule-list h3 .latin { font-size: .7rem; color: var(--accent); }
-.rule-list p { margin: 0; color: var(--ink-2); font-size: .95rem; }
-
+[lang="en"] 
 .safety {
   margin-top: 3rem; background: var(--card); border: 4px dashed var(--edge);
   padding: 1.6rem;
@@ -338,7 +336,32 @@ a { color: inherit; }
 .safety p { margin: 0; color: var(--ink-2); font-size: .95rem; }
 .safety .sub-title { margin-top: 0; }
 
-/* ---------- cta / transparency ---------- */
+/* ---------- the one rule ---------- */
+.rule-headline {
+  margin: 2.2rem 0 .6rem;
+  background: var(--card);
+  border: 4px solid var(--accent);
+  box-shadow: 10px 10px 0 var(--shadow);
+  padding: 1.8rem;
+}
+.rule-tag {
+  display: inline-block; margin: 0 0 1rem;
+  background: var(--accent); color: #fff;
+  font-family: "Press Start 2P", monospace; font-size: .52rem;
+  padding: .5em .8em;
+}
+.rule-main {
+  font-size: clamp(1.35rem, 3.4vw, 2.1rem); font-weight: 900; line-height: 1.5;
+  margin: 0 0 .6em;
+}
+[lang="en"] .rule-main { font-size: clamp(1.05rem, 2.6vw, 1.6rem); }
+.rule-except {
+  margin: 0; color: var(--ink-2); font-size: 1.02rem;
+  padding-left: 1rem; border-left: 6px solid var(--accent-2);
+}
+.rule-notes { display: grid; gap: 1.4rem; align-content: start; }
+
+/* ---------- cta ---------- */
 .cta-box {
   margin-top: 2.4rem; background: var(--ink); color: var(--paper);
   border: 4px solid var(--edge); box-shadow: 8px 8px 0 var(--accent);
@@ -348,16 +371,6 @@ a { color: inherit; }
 .cta-box p { margin: 0; max-width: 52ch; }
 .cta-box .pixel-btn { flex: none; }
 
-.transparency { margin-top: 3rem; }
-.gov-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .8rem; }
-.gov-list li {
-  display: grid; grid-template-columns: minmax(120px, 190px) 1fr; gap: 1rem;
-  border-bottom: 3px dotted var(--ink-2); padding-bottom: .8rem;
-}
-@media (max-width: 640px) { .gov-list li { grid-template-columns: 1fr; gap: .2rem; } }
-.gov-list b { color: var(--accent); }
-.gov-list span { color: var(--ink-2); font-size: .95rem; }
-.note { margin-top: 1.4rem; font-size: .85rem; color: var(--ink-2); }
 
 /* ---------- faq ---------- */
 .faq-list { margin-top: 2rem; display: grid; gap: .9rem; }
