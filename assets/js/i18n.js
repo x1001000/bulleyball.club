@@ -5,7 +5,7 @@
 window.BB_I18N = {
   zh: {
     "meta.title": "鬥牛排球 Bulleyball ｜ 鬥牛排球運動推廣社",
-    "meta.desc": "鬥牛排球（簡稱牛排）：2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只改一條——球落在三米線內算出界，攔網成功的球除外。球不落地、更多自由！",
+    "meta.desc": "鬥牛排球（簡稱牛排）：2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只改一條——球落在三米線內算出界，攔網成功的球除外。球不落地、我就自由",
 
     "a11y.skip": "跳到主要內容",
     "a11y.menu": "開關選單",
@@ -29,7 +29,7 @@ window.BB_I18N = {
 
     "hero.eyebrow": "鬥牛排球運動推廣社 ・ 規則倡議中",
     "hero.sub": "簡稱「牛排」",
-    "hero.slogan": "球不落地、更多自由！",
+    "hero.slogan": "球不落地、我就自由",
     "hero.lead": "籃球從全場發展出「鬥牛」，排球何嘗不可？2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只動一條：球落在三米線內算出界——攔網成功的球除外。",
     "hero.cta1": "看規則",
     "hero.cta2": "一起推廣",
@@ -80,7 +80,7 @@ window.BB_I18N = {
     "effect.c3.h": "攔網重新值錢",
     "effect.c3.p": "攔網成功的球不受三米線限制，落在前區照樣得分。敢攔、攔得到，就有回報——網前的正面對決重新變得值得。",
     "effect.c4.h": "沒有前後排，人人可攻",
-    "effect.c4.p": "人數少到不需要輪轉，也就沒有前排後排之分：任何人、在任何位置都可以起跳攻擊。這就是「更多自由」的來源——唯一的限制不是你站在哪，而是球要落得夠深。",
+    "effect.c4.p": "人數少到不需要輪轉，也就沒有前排後排之分：任何人、在任何位置都可以起跳攻擊。這就是「我就自由」的意思——唯一的限制不是你站在哪，而是球要落得夠深。",
     "effect.c5.h": "要守的範圍其實變小了",
     "effect.c5.p": "三米線內不必再防守，兩三個人真正要顧的只剩後場那 54 平方公尺，而不是整整 81 平方公尺。這條規則限制了攻擊，同時也讓少人數守全場變得可能——兩件事是同一件事。",
     "effect.note.h": "這是提案，不是定論",
@@ -129,7 +129,7 @@ window.BB_I18N = {
 
   en: {
     "meta.title": "Bulleyball 鬥牛排球 | Bulleyball Club",
-    "meta.desc": "Bulleyball: 2v2 or 3v3 on a full standard court, played under the indoor six-a-side rulebook with one change — a ball landing inside the 3 m line is out, unless it came off a successful block. The ball never lands — more freedom.",
+    "meta.desc": "Bulleyball: 2v2 or 3v3 on a full standard court, played under the indoor six-a-side rulebook with one change — a ball landing inside the 3 m line is out, unless it came off a successful block. While the ball is up, I am free.",
 
     "a11y.skip": "Skip to main content",
     "a11y.menu": "Toggle menu",
@@ -153,7 +153,7 @@ window.BB_I18N = {
 
     "hero.eyebrow": "BULLEYBALL CLUB · A RULE PROPOSAL",
     "hero.sub": "\"NIU-PAI\" FOR SHORT",
-    "hero.slogan": "The ball never lands — more freedom!",
+    "hero.slogan": "While the ball is up, I\u2019m free.",
     "hero.lead": "Basketball grew a pick-up format out of the full-court game. Why not volleyball? Bulleyball is 2v2 or 3v3 on a full standard court, played under the indoor six-a-side rulebook, with exactly one thing changed: a ball landing inside the 3 m line is out — unless it came off a successful block.",
     "hero.cta1": "THE RULE",
     "hero.cta2": "TAKE PART",
@@ -204,7 +204,7 @@ window.BB_I18N = {
     "effect.c3.h": "Blocking is worth something again",
     "effect.c3.p": "A ball off a successful block isn't bound by the 3 m line — land it in the front zone and it still scores. Commit to the block and you get paid for it, so the duel at the net is worth contesting.",
     "effect.c4.h": "No front row, no back row",
-    "effect.c4.p": "With too few players to rotate, the front-row/back-row distinction disappears: anyone can attack from anywhere on the court. That's where the \"more freedom\" comes from — the only constraint isn't where you stand, it's how deep the ball has to land.",
+    "effect.c4.p": "With too few players to rotate, the front-row/back-row distinction disappears: anyone can attack from anywhere on the court. That is the freedom the slogan is talking about — the only constraint isn't where you stand, it's how deep the ball has to land.",
     "effect.c5.h": "There's actually less to defend",
     "effect.c5.p": "Nobody has to cover the front zone any more, so two or three players are really defending the 54 m² of back court rather than the full 81 m². The rule constrains the attack and makes a small squad on a full court viable — those turn out to be the same thing.",
     "effect.note.h": "A proposal, not a verdict",

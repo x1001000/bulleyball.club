@@ -3,7 +3,7 @@
 Landing page for **鬥牛排球運動推廣社 / Bulleyball Club** — an open proposal for a volleyball
 rule variant called **鬥牛排球 (Bulleyball)**, "牛排" for short.
 
-*球不落地、更多自由！ — The ball never lands — more freedom!*
+*球不落地、我就自由 — While the ball is up, I'm free.*
 
 ## The proposal
 
@@ -21,7 +21,7 @@ the same ground, which is what pick-up basketball did to the full-court game.
 The one rule does double duty. It kills the dink, so every attack has to be driven deep — and it
 takes the front zone out of play, so two or three players are defending 54 m² instead of 81 m²,
 which is what makes a small squad on a full court viable at all. With no rotation there is no
-front row or back row either, so anyone can attack from anywhere: *球不落地、更多自由*.
+front row or back row either, so anyone can attack from anywhere: *球不落地、我就自由*.
 
 The rule is published as **v0.1**, explicitly open to revision from people who actually play it.
 
