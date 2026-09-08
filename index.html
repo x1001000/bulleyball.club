@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>鬥牛排球 Bulleyball ｜ 鬥牛排球運動推廣社</title>
-<meta name="description" data-i18n-attr="content:meta.desc" content="鬥牛排球（簡稱牛排）：2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只改一條——球落在三米線內算出界，攔網成功的球除外。球不落地、我就自由">
+<meta name="description" data-i18n-attr="content:meta.desc" content="鬥牛排球（簡稱牛排）：2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只改一條——球落在三米線內算出界，攔網除外。球不落地、我就自由">
 <meta name="theme-color" content="#0f1020">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="鬥牛排球 Bulleyball">
-<meta property="og:description" content="球不落地、我就自由。2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只改一條：球落在三米線內算出界，攔網成功的球除外。">
+<meta property="og:description" content="球不落地、我就自由。2v2 或 3v3 打整座標準球場，規則沿用六人制排球競賽規則，只改一條：球落在三米線內算出界，攔網除外。">
 <meta property="og:url" content="https://x1001000.github.io/bulleyball.club/">
 <meta property="og:image" content="https://x1001000.github.io/bulleyball.club/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -162,24 +162,33 @@
       <article class="card">
         <div class="card-ico" aria-hidden="true">
           <svg viewBox="0 0 16 16" width="48" height="48" shape-rendering="crispEdges">
-            <rect x="1" y="10" width="14" height="4" fill="var(--c-court)"/>
-            <rect x="7" y="2" width="2" height="9" fill="var(--ink)"/>
-            <rect x="3" y="2" width="10" height="1" fill="var(--ink)"/>
-            <circle cx="4" cy="6" r="2" fill="var(--accent-2)"/>
+            <circle cx="8" cy="8" r="4" fill="var(--accent-2)"/>
+            <rect x="7" y="0" width="2" height="2" fill="var(--accent-2)"/>
+            <rect x="7" y="14" width="2" height="2" fill="var(--accent-2)"/>
+            <rect x="0" y="7" width="2" height="2" fill="var(--accent-2)"/>
+            <rect x="14" y="7" width="2" height="2" fill="var(--accent-2)"/>
+            <g stroke="var(--ink)" stroke-width="2">
+              <line x1="2" y1="14" x2="14" y2="2"/>
+            </g>
           </svg>
         </div>
-        <h3 data-i18n="about.c2.h">排球何嘗不可</h3>
+        <h3 data-i18n="about.c2.h">沙排太麻煩</h3>
         <p data-i18n="about.c2.p">沙灘排球雖然可以 2v2，但規則嚴謹、場地稀少、維護不易、各種麻煩。</p>
       </article>
       <article class="card">
         <div class="card-ico" aria-hidden="true">
           <svg viewBox="0 0 16 16" width="48" height="48" shape-rendering="crispEdges">
-            <rect x="2" y="2" width="12" height="12" fill="none" stroke="var(--ink)" stroke-width="1"/>
-            <rect x="2" y="2" width="5" height="12" fill="var(--c-zone)"/>
-            <rect x="9" y="6" width="4" height="4" fill="var(--accent)"/>
+            <g fill="var(--ink)">
+              <rect x="0" y="0" width="5" height="1"/><rect x="0" y="0" width="1" height="5"/>
+              <rect x="11" y="0" width="5" height="1"/><rect x="15" y="0" width="1" height="5"/>
+              <rect x="0" y="15" width="5" height="1"/><rect x="0" y="11" width="1" height="5"/>
+              <rect x="11" y="15" width="5" height="1"/><rect x="15" y="11" width="1" height="5"/>
+            </g>
+            <rect x="7" y="5" width="2" height="2" fill="var(--ink)"/>
+            <rect x="7" y="7" width="2" height="4" fill="var(--accent)"/>
           </svg>
         </div>
-        <h3 data-i18n="about.c3.h">人少，更自由</h3>
+        <h3 data-i18n="about.c3.h">人少更自由</h3>
         <p data-i18n="about.c3.p">2v2 或 3v3，打整座 18×9 公尺的標準球場。能力越強，責任越大。不鬥嘴，只鬥牛。</p>
       </article>
     </div>
@@ -212,7 +221,7 @@
     <div class="rule-headline">
       <p class="rule-tag" data-i18n="rules.one.h">唯一的微調</p>
       <p class="rule-main" data-i18n="rules.one.p1">球落在三米線內，算出界。</p>
-      <p class="rule-except" data-i18n="rules.one.p2">但若該球經攔網成功後落在三米線內，不算出界，照常判定。</p>
+      <p class="rule-except" data-i18n="rules.one.p2">但若該球經攔網後落在三米線內，不算出界，照常判定。</p>
     </div>
 
     <div class="cards three">
@@ -258,7 +267,7 @@
         <span class="spirit-num latin">03</span>
         <div>
           <h4 data-i18n="effect.c3.h">攔網重新值錢</h4>
-          <p data-i18n="effect.c3.p">攔網成功的球不受三米線限制，落在前區照樣得分。敢攔、攔得到，就有回報——網前的正面對決重新變得值得。</p>
+          <p data-i18n="effect.c3.p">經攔網的球不受三米線限制，落在前區照樣得分。敢攔、攔得到，就有回報——網前的正面對決重新變得值得。</p>
         </div>
       </li>
       <li>
@@ -323,8 +332,8 @@
         <p data-i18n="faq.a3">如果是六人制，可能太嚴苛。但鬥牛排球只有兩三個人守全場——把前區排除在有效區域外，反而是讓少人數守得住的關鍵。如果實戰證明不對，這條規則就會改，所以我們才需要你的試打結果。</p>
       </details>
       <details class="faq-item">
-        <summary data-i18n="faq.q4">為什麼攔網成功要例外？</summary>
-        <p data-i18n="faq.a4">沒有例外的話，攔網會變成一件划不來的事：攔到反而讓球落在自己的前區送分。加上例外之後，攔網的回報回來了，網前的正面對決才有意義。</p>
+        <summary data-i18n="faq.q4">為什麼攔網要除外？</summary>
+        <p data-i18n="faq.a4">沒有這條除外的話，攔網會變成一件划不來的事：攔到反而讓球落在自己的前區送分。有了攔網除外，攔網的回報回來了，網前的正面對決才有意義。</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq.q5">需要特別的場地或器材嗎？</summary>
