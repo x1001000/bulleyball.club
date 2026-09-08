@@ -1,7 +1,7 @@
 # bulleyball.club
 
 Landing page for **鬥牛排球運動推廣社 / Bulleyball Club** — an open proposal for a volleyball
-rule variant called **鬥牛排球 (Bulleyball)**, "牛排" for short.
+rule variant called **鬥牛排球 (Bulleyball)**.
 
 *球不落地、我就自由 — Ball's alive. I'm free.*
 

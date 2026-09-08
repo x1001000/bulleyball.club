@@ -278,6 +278,13 @@ a { color: inherit; }
 .cards { display: grid; gap: 1.4rem; margin-top: 2rem; }
 /* the naming pair lost its sub-heading, so it needs its own separation */
 .name-story { margin-top: 2.8rem; }
+/* the Chinese short name is a pun that does not survive translation, so
+   the English page carries neither it nor the card that explains it */
+[lang="en"] .hero-sub,
+[lang="en"] .ticker .zh-pun,
+[lang="en"] .name-story .card.accent-2 { display: none; }
+[lang="en"] .name-story .cards.two { grid-template-columns: 1fr; }
+[lang="en"] .name-story .kicker { display: none; }
 .cards.two   { grid-template-columns: repeat(2, 1fr); }
 .cards.three { grid-template-columns: repeat(3, 1fr); }
 .cards.four  { grid-template-columns: repeat(4, 1fr); }
