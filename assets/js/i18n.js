@@ -54,8 +54,8 @@ window.BB_I18N = {
     "about.c2.p": "排球至今沒有這個版本。沙灘排球換掉了場地、球與判定標準，成了另一項運動；室內排球則從來沒有一個「人變少、場地照舊」的玩法。",
     "about.c3.h": "人少，場地照舊",
     "about.c3.p": "2v2 或 3v3，打整座 18×9 公尺的標準球場。人減少了，責任沒有減少——這正是鬥牛的精神：用更少的人，扛下一樣大的場地。",
-    "about.name.title": "兩個名字，一頭牛",
-    "about.name.en": "bull（公牛、鬥牛）與 volleyball 的合體，也借了籃球 bully ball 那種硬碰硬、不靠花招的意思。鬥牛場上沒有迂迴，正面對決而已。",
+    "about.name.title": "兩個名字，都在喘",
+    "about.name.en": "bull 本來就藏在 volleyball 裡。它講的不是誰比較兇，而是打完之後的狀態——兩三個人扛一整座球場，一顆長球來回下來，講話開始斷句。氣喘如牛的那個牛。",
     "about.name.zh": "中文直接沿用籃球「鬥牛」的說法，簡稱「牛排」——好記、好喊、好約。「今晚打牛排嗎？」這句話本身就是最好的推廣。",
 
     "rules.title": "規則",
@@ -99,7 +99,7 @@ window.BB_I18N = {
 
     "faq.title": "常見問題",
     "faq.q1": "為什麼叫「鬥牛排球」？",
-    "faq.a1": "因為它想成為排球版的鬥牛。籃球的鬥牛是從全場長出來的另一種玩法，我們想讓排球也有一種。英文 Bulleyball 取 bull 與 volleyball 的合體，中英文剛好對得起來。",
+    "faq.a1": "因為它想成為排球版的鬥牛。籃球的鬥牛是從全場長出來的另一種玩法，我們想讓排球也有一種。英文 Bulleyball 把 bull 藏進 volleyball 裡——不是兇猛的那個牛，是氣喘如牛的那個牛。中英文剛好對得起來。",
     "faq.q2": "「牛排」是認真的簡稱嗎？",
     "faq.a2": "非常認真。運動要能被約出來，名字就得夠好喊。「今晚打牛排」比任何宣傳都有效。",
     "faq.q3": "三米線內落地就算出界，會不會太嚴苛？",
@@ -178,8 +178,8 @@ window.BB_I18N = {
     "about.c2.p": "Volleyball has never had this version. Beach volleyball swapped the surface, the ball and the judging standards until it became a separate sport; indoors, nobody has tried simply taking players off and leaving the court alone.",
     "about.c3.h": "Fewer players, same court",
     "about.c3.p": "Two or three a side on a full 18 × 9 m court. The squad shrinks, the responsibility doesn't — which is exactly what pick-up basketball did: fewer people carrying the same ground.",
-    "about.name.title": "Two names, one bull",
-    "about.name.en": "Bull — as in the bullfight — collided with volleyball, borrowing basketball's \"bully ball\" for its head-on, no-tricks attitude. Nothing in a bullring goes around anything.",
+    "about.name.title": "Two names, both out of breath",
+    "about.name.en": "The bull was hiding inside volleyball all along. It isn't about who hits harder — it's about the state you're in afterwards. Two or three people covering a whole court, one long rally, and you're talking in fragments. Chinese has a phrase for it: 氣喘如牛, breathing like an ox.",
     "about.name.zh": "The Chinese name 鬥牛排球 borrows basketball's word for pick-up directly, and shortens to 牛排 (niú-pái) — which also happens to be the word for steak. \"Playing steak tonight?\" is, by itself, the best promotion this sport has.",
 
     "rules.title": "The rules",
@@ -223,7 +223,7 @@ window.BB_I18N = {
 
     "faq.title": "FAQ",
     "faq.q1": "Why \"Bulleyball\"?",
-    "faq.a1": "Because it wants to be volleyball's pick-up game. Basketball's 鬥牛 grew out of the full-court game; we'd like volleyball to have one too. Bulleyball fuses bull with volleyball, and the Chinese and English names land in the same place for once.",
+    "faq.a1": "Because it wants to be volleyball's pick-up game. Basketball's 鬥牛 grew out of the full-court game; we'd like volleyball to have one too. Bulleyball hides bull inside volleyball — not the fierce animal, the one in 氣喘如牛, panting like an ox — so for once the Chinese and English names land in the same place.",
     "faq.q2": "Is 牛排 (\"steak\") a serious nickname?",
     "faq.a2": "Completely serious. A sport has to be easy to call a game of, and the name has to be easy to shout. \"Steak tonight?\" beats any campaign we could run.",
     "faq.q3": "Isn't calling the front zone out too harsh?",
