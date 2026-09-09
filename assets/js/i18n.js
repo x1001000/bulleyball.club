@@ -69,7 +69,7 @@ window.BB_I18N = {
     "rules.count.h": "人數與場地",
     "rules.count.p": "2v2 或 3v3，現場有幾個人就決定打哪一種，規則完全不用改。場地一律是整座標準球場——鬥牛的重點從來不是把場地變小，而是把人變少。",
     "rules.why.h": "為什麼是三米線",
-    "rules.why.p": "三米線本來就畫在每一座標準球場上，不必重新標線。當前後排的界線變成場內外的界線，不僅巧妙的將 Bulleyball 的攻守優勢微調出最佳平衡，也將排球從輪轉規則解放出來！",
+    "rules.why.p": "三米線本來就畫在每一座標準球場上，不必重新標線。當前後排的界線變成場內外的界線，不僅巧妙地將 Bulleyball 的攻守優勢微調出更好的平衡，也將排球從輪轉規則解放出來！",
 
     "effect.title": "這條規則改變了什麼",
     "effect.lead": "只動一條判定，攻守兩端的算計都會跟著變。以下是我們預期會發生的事——但真正的答案要打過才知道。",
@@ -191,7 +191,7 @@ window.BB_I18N = {
     "rules.count.h": "Squad and court",
     "rules.count.p": "2v2 or 3v3 — whoever turned up decides which, and nothing in the rules changes either way. The court is always the full standard one: the point of pick-up was never to shrink the court, only the squad.",
     "rules.why.h": "Why the 3 m line",
-    "rules.why.p": "The 3 m line is already painted on every standard court, so there is nothing to mark out. And turning the line between front row and back row into the line between in and out does two things at once: it tunes the balance of attack and defence to just the right point, and it frees volleyball from the rotation rules.",
+    "rules.why.p": "The 3 m line is already painted on every standard court, so there is nothing to mark out. And turning the line between front row and back row into the line between in and out does two things at once: it tunes the balance of attack and defence towards something better, and it frees volleyball from the rotation rules.",
 
     "effect.title": "What the rule changes",
     "effect.lead": "One line of judgement, and the maths of both attack and defence shifts. Here's what we expect to happen — the real answer needs court time.",
