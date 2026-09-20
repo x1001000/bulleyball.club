@@ -89,8 +89,6 @@ window.BB_I18N = {
     "join.j2.p": "比賽變得更好看還是更難打？哪裡卡住了？需要調整什麼？你的實戰經驗就是這條規則的下一個版本。",
     "join.j3.h": "把牛排講出去",
     "join.j3.p": "告訴你的球隊、系隊、社團與球友。一項運動能不能長出來，取決於有多少人願意試第一場。",
-    "join.cta.p": "打完一場，寫信告訴我們結果——幾比幾、卡在哪、還想改什麼。一兩句話也很有幫助。",
-    "join.cta.btn": "寫信給我們",
 
     "faq.title": "常見問題",
     "faq.q1": "為什麼叫「鬥牛排球」？",
@@ -115,9 +113,6 @@ window.BB_I18N = {
     "contact.title": "聯絡我們",
     "contact.lead": "試打結果、規則意見、想一起推廣，都歡迎直接來信。我們會把收到的回饋整理成下一版規則。",
     "contact.email": "電子郵件",
-    "contact.box.h": "打過了嗎？",
-    "contact.box.p": "告訴我們比數、人數與你們的感覺。第一批試打的隊伍，會直接影響 v0.2 長什麼樣子。",
-    "contact.box.btn": "回報試打結果",
 
     "footer.org": "鬥牛排球運動推廣社"
   },
@@ -208,8 +203,6 @@ window.BB_I18N = {
     "join.j2.p": "Better to watch, or just harder to play? Where did it break down? What needs adjusting? Your court time is what the next version of this rule is made of.",
     "join.j3.h": "Pass it on",
     "join.j3.p": "Tell your club, your university side, your regular group. Whether a sport grows comes down to how many people are willing to try the first game.",
-    "join.cta.p": "Once you've played a set, email us how it went — the score, where it snagged, what you'd change. A couple of sentences genuinely helps.",
-    "join.cta.btn": "EMAIL US",
 
     "faq.title": "FAQ",
     "faq.q1": "Why \"Bulleyball\"?",
@@ -234,9 +227,6 @@ window.BB_I18N = {
     "contact.title": "Contact",
     "contact.lead": "Match reports, objections to the rule, offers to help spread it — email us directly. Everything we get goes into the next version.",
     "contact.email": "Email",
-    "contact.box.h": "Played it yet?",
-    "contact.box.p": "Send us the score, the squad size and how it felt. The first sides to try it will shape what v0.2 looks like.",
-    "contact.box.btn": "SEND A MATCH REPORT",
 
     "footer.org": "Bulleyball Club"
   }
