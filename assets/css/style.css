@@ -268,11 +268,15 @@ a { color: inherit; }
 .sub-title { font-size: 1.3rem; margin: 2.6rem 0 1.2rem; padding-left: .6rem; border-left: 8px solid var(--accent); }
 [lang="en"] .sub-title { font-size: .92rem; }
 
+/* these two labels sit at pixel-font sizes, but their Chinese falls back
+   to a CJK sans — so the size is set per language rather than once */
 .badge {
   display: inline-block; background: var(--accent-2); color: #17151f;
-  border: 3px solid var(--edge); box-shadow: 4px 4px 0 var(--shadow);
-  padding: .5em .9em; font-size: .55rem; margin-top: .5rem;
+  border: 3px solid var(--edge); box-shadow: 5px 5px 0 var(--shadow);
+  padding: .45em .9em; font-size: .95rem; letter-spacing: .04em;
+  margin-top: .5rem;
 }
+[lang="en"] .badge { font-size: .64rem; padding: .55em .9em; letter-spacing: 0; }
 
 /* ---------- cards ---------- */
 .cards { display: grid; gap: 1.4rem; margin-top: 2rem; }
@@ -347,9 +351,10 @@ a { color: inherit; }
 .rule-tag {
   display: inline-block; margin: 0 0 1rem;
   background: var(--accent); color: #fff;
-  font-family: "Press Start 2P", monospace; font-size: .52rem;
-  padding: .5em .8em;
+  font-family: "Press Start 2P", monospace; font-size: .95rem;
+  letter-spacing: .06em; padding: .4em .85em;
 }
+[lang="en"] .rule-tag { font-size: .62rem; letter-spacing: 0; padding: .55em .85em; }
 .rule-main {
   font-size: clamp(1.35rem, 3.4vw, 2.1rem); font-weight: 900; line-height: 1.5;
   margin: 0 0 .6em;
