@@ -59,7 +59,6 @@ window.BB_I18N = {
     "about.name.zh": "今晚打牛排嗎？懂的就懂",
 
     "rules.title": "規則",
-    "rules.lead": "上場 2v2 或 3v3，規則沿用六人制排球競賽規則（不是沙灘排球規則），場地不縮小。唯一的微調只有一條。",
     "rules.badge": "規則倡議 v0.1 ・ 歡迎試打後回饋",
     "rules.one.h": "唯一的微調",
     "rules.one.p1": "球落在三米線內，算出界。",
@@ -72,7 +71,6 @@ window.BB_I18N = {
     "rules.why.p": "三米線本來就畫在每一座標準球場上，不必重新標線。當前後排的界線變成場內外的界線，不僅巧妙地將 Bulleyball 的攻守優勢微調出更好的平衡，也將排球從輪轉規則解放出來！",
 
     "effect.title": "這條規則改變了什麼",
-    "effect.lead": "只動一條判定，攻守兩端的算計都會跟著變。以下是我們預期會發生的事——但真正的答案要打過才知道。",
     "effect.c1.h": "吊球與輕推失效",
     "effect.c1.p": "前區的小球不再是安全牌。擦網落地、網前輕推、防守方來不及的那種取巧球，全部變成對方得分。",
     "effect.c2.h": "攔網不受影響",
@@ -85,7 +83,6 @@ window.BB_I18N = {
     "effect.note.p": "得分率會怎麼變、來回會變長還是變短、對業餘隊伍會不會太嚴苛，我們都還沒有答案。這條規則需要的是實戰資料，不是更多論述。打過的人說了算。",
 
     "join.title": "一起推廣",
-    "join.lead": "現階段不需要錢，也不需要組織。只需要有人願意用這條規則打一場，然後告訴我們發生了什麼。",
     "join.j1.h": "試打一局",
     "join.j1.p": "找三個人佔一個場（或五個，打 3v3），用這條規則打一局。其他規則完全不用改。",
     "join.j2.h": "回饋結果",
@@ -181,7 +178,6 @@ window.BB_I18N = {
     "about.name.zh": "The Chinese name carries a pun that only works in Chinese.",
 
     "rules.title": "The rules",
-    "rules.lead": "Two or three a side, played under the indoor six-a-side rulebook (not beach rules), on a court that isn't shrunk. Exactly one adjustment.",
     "rules.badge": "RULE PROPOSAL v0.1 · FEEDBACK WANTED",
     "rules.one.h": "The one change",
     "rules.one.p1": "A ball landing inside the 3 m line is out.",
@@ -194,7 +190,6 @@ window.BB_I18N = {
     "rules.why.p": "The 3 m line is already painted on every standard court, so there is nothing to mark out. And turning the line between front row and back row into the line between in and out does two things at once: it tunes the balance of attack and defence towards something better, and it frees volleyball from the rotation rules.",
 
     "effect.title": "What the rule changes",
-    "effect.lead": "One line of judgement, and the maths of both attack and defence shifts. Here's what we expect to happen — the real answer needs court time.",
     "effect.c1.h": "The dink dies",
     "effect.c1.p": "Soft balls into the front zone stop being the safe option. Net-cord drops, tips over the block, the cheap ball the defence can't reach in time — all of it now hands the point to the other side.",
     "effect.c2.h": "Blocking is unaffected",
@@ -207,7 +202,6 @@ window.BB_I18N = {
     "effect.note.p": "How scoring rates shift, whether rallies get longer or shorter, whether it's too harsh for amateur sides — we don't know yet. This rule needs match data, not more argument. The people who play it decide.",
 
     "join.title": "Take part",
-    "join.lead": "Right now this needs no money and no organisation. It needs someone to play one set under the rule and tell us what happened.",
     "join.j1.h": "Play one set",
     "join.j1.p": "Grab three people and a court (or five, for 3v3) and play a set under the rule. Change nothing else.",
     "join.j2.h": "Report back",
