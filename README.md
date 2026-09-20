@@ -125,7 +125,7 @@ does need replacing:
 
 | Where | What |
 |---|---|
-| `contact.*`, the two `mailto:` links | `hello@bulleyball.club` — swap for the real inbox |
+| the `mailto:` link in the contact section | `PHIL@bulleyball.club` |
 
 ## Deploying
 

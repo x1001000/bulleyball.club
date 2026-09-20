@@ -111,8 +111,7 @@ window.BB_I18N = {
     "faq.a9": "因為縮小場地就要重新標線，而每一座球場的線都不一樣。三米線本來就畫好了——用它當出界線，等於不動任何一條線就把有效區域縮小，走到哪一座場都能立刻開打。",
 
     "contact.title": "聯絡我們",
-    "contact.lead": "試打結果、規則意見、想一起推廣，都歡迎直接來信。我們會把收到的回饋整理成下一版規則。",
-    "contact.email": "電子郵件",
+    "contact.lead": "試打結果、規則意見、想一起推廣、有志參與第一屆牛排盃，都歡迎直接來信。",
 
     "footer.org": "鬥牛排球運動推廣社"
   },
@@ -225,8 +224,7 @@ window.BB_I18N = {
     "faq.a9": "Because shrinking it means marking new lines, and no two venues mark them the same way. The 3 m line is already painted on every court — using it as the out line shrinks the effective area without drawing anything, so any court you walk onto is ready.",
 
     "contact.title": "Contact",
-    "contact.lead": "Match reports, objections to the rule, offers to help spread it — email us directly. Everything we get goes into the next version.",
-    "contact.email": "Email",
+    "contact.lead": "Match reports, thoughts on the rule, offers to help spread it, anyone up for the first Bulleyball Cup — email us directly.",
 
     "footer.org": "Bulleyball Club"
   }

@@ -381,11 +381,15 @@ a { color: inherit; }
 .faq-item p { margin: 0; padding: 0 1.3rem 1.3rem; color: var(--ink-2); font-size: .95rem; }
 
 /* ---------- contact ---------- */
-.contact-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1rem; }
-.contact-list li { display: grid; grid-template-columns: 150px 1fr; gap: 1rem; border-bottom: 3px dotted var(--ink-2); padding-bottom: .9rem; }
-@media (max-width: 520px) { .contact-list li { grid-template-columns: 1fr; gap: .2rem; } }
-.contact-list b { color: var(--accent); }
-.contact-list a { color: var(--accent-3); }
+.contact-links { list-style: none; padding: 0; margin: 1.8rem 0 0; display: flex; gap: 1rem; }
+.contact-links a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 58px; height: 58px; color: var(--ink); background: var(--card);
+  border: 4px solid var(--edge); box-shadow: 5px 5px 0 var(--shadow);
+  transition: transform .06s steps(2), box-shadow .06s steps(2), background-color .2s;
+}
+.contact-links a:hover { background: var(--accent); color: #fff; }
+.contact-links a:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--shadow); }
 
 /* ---------- footer ---------- */
 .site-footer { background: var(--ink); color: var(--paper); border-top: 4px solid var(--edge); padding: 2.5rem 0; }
