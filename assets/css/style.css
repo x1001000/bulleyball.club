@@ -24,6 +24,10 @@
   --hud:      rgba(23, 21, 31, 0.78);
   --hud-ink:  #f4ecdc;
   --c-skin:   #f2c89e;
+  /* the footer is dark in both themes, so its colours are set once here
+     and deliberately not redefined under [data-theme="dark"] */
+  --footer-bg:  #17151f;
+  --footer-ink: #f4ecdc;
   color-scheme: light;
 }
 
@@ -392,7 +396,7 @@ a { color: inherit; }
 .contact-links a:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--shadow); }
 
 /* ---------- footer ---------- */
-.site-footer { background: var(--ink); color: var(--paper); border-top: 4px solid var(--edge); padding: 2.5rem 0; }
+.site-footer { background: var(--footer-bg); color: var(--footer-ink); border-top: 4px solid var(--edge); padding: 2.5rem 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
 .footer-brand b { color: var(--accent); font-size: .8rem; }
 .footer-brand span { margin-left: .5rem; }
