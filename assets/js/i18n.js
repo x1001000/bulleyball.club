@@ -96,7 +96,7 @@ window.BB_I18N = {
     "faq.q2": "「牛排」是認真的簡稱嗎？",
     "faq.a2": "非常認真。運動要能被約出來，名字就得夠好喊。「今晚打牛排」比任何宣傳都有效。",
     "faq.q3": "三米線內落地就算出界，會不會太嚴苛？",
-    "faq.a3": "如果是六人制，可能太嚴苛。但鬥牛排球只有兩三個人守全場——把前區排除在有效區域外，反而是讓少人數守得住的關鍵。如果實戰證明不對，這條規則就會改，所以我們才需要你的試打結果。",
+    "faq.a3": "如果是六人制，可能太嚴苛。但鬥牛排球只有兩三個人守全場——把前區排除在有效區域外，反而是讓少人數守得住的關鍵。如果實戰證明不對，這條規則就會改，所以我們才需要你的試打回饋。",
     "faq.q4": "為什麼攔網要除外？",
     "faq.a4": "沒有這條除外的話，攔網會變成一件划不來的事：攔到反而讓球落在自己的前區送分。有了攔網除外，攔網的回報回來了，網前的正面對決才有意義。",
     "faq.q5": "需要特別的場地或器材嗎？",
@@ -111,7 +111,7 @@ window.BB_I18N = {
     "faq.a9": "因為縮小場地就要重新標線，而每一座球場的線都不一樣。三米線本來就畫好了——用它當出界線，等於不動任何一條線就把有效區域縮小，走到哪一座場都能立刻開打。",
 
     "contact.title": "聯絡我們",
-    "contact.lead": "試打結果、規則意見、想一起推廣、有志參與第一屆牛排盃，都歡迎直接來信。",
+    "contact.lead": "試打回饋、規則意見、想一起推廣、有志參與第一屆牛排盃，都熱烈歡迎！",
 
     "footer.org": "鬥牛排球運動推廣社"
   },
@@ -198,7 +198,7 @@ window.BB_I18N = {
     "join.title": "Take part",
     "join.j1.h": "Play one set",
     "join.j1.p": "Grab three people and a court (or five, for 3v3) and play a set under the rule. Change nothing else.",
-    "join.j2.h": "Report back",
+    "join.j2.h": "Feedback",
     "join.j2.p": "Better to watch, or just harder to play? Where did it break down? What needs adjusting? Your court time is what the next version of this rule is made of.",
     "join.j3.h": "Pass it on",
     "join.j3.p": "Tell your club, your university side, your regular group. Whether a sport grows comes down to how many people are willing to try the first game.",
@@ -209,7 +209,7 @@ window.BB_I18N = {
     "faq.q2": "Does the name really matter that much?",
     "faq.a2": "Completely. A sport has to be easy to call a game of, and the name has to be easy to shout. \"Bulleyball tonight?\" beats any campaign we could run.",
     "faq.q3": "Isn't calling the front zone out too harsh?",
-    "faq.a3": "For six a side it probably would be. But Bulleyball has two or three players covering the whole court — taking the front zone out of play is what makes that defensible. If match experience says otherwise, the rule changes, which is exactly why we want your results.",
+    "faq.a3": "For six a side it probably would be. But Bulleyball has two or three players covering the whole court — taking the front zone out of play is what makes that defensible. If match experience says otherwise, the rule changes, which is exactly why we want your feedback.",
     "faq.q4": "Why does a block get an exception?",
     "faq.a4": "Without the exception, blocking would be a losing move: touch the ball and you drop it in your own front zone, gifting the point. With the exception, blocking pays again and the contest at the net is worth having.",
     "faq.q5": "Do we need a special court or equipment?",
@@ -224,7 +224,7 @@ window.BB_I18N = {
     "faq.a9": "Because shrinking it means marking new lines, and no two venues mark them the same way. The 3 m line is already painted on every court — using it as the out line shrinks the effective area without drawing anything, so any court you walk onto is ready.",
 
     "contact.title": "Contact",
-    "contact.lead": "Match reports, thoughts on the rule, offers to help spread it, anyone up for the first Bulleyball Cup — email us directly.",
+    "contact.lead": "Match feedback, thoughts on the rule, offers to help spread it, anyone up for the first Bulleyball Cup — all very welcome!",
 
     "footer.org": "Bulleyball Club"
   }

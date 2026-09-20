@@ -308,7 +308,7 @@ a { color: inherit; }
 .card p { margin: 0; color: var(--ink-2); font-size: .95rem; }
 .card-ico { margin-bottom: .8rem; line-height: 0; }
 .card.accent { border-top: 14px solid var(--accent); }
-.card.accent-2 { border-top: 14px solid var(--accent-3); }
+.card.accent-2 { border-top: 14px solid var(--accent-2); }
 .kicker { font-size: .55rem; color: var(--accent); margin-bottom: .6rem; }
 .card h4.big { font-size: 1.6rem; margin-bottom: .5em; }
 .card h4.big.latin { font-size: 1.15rem; }
@@ -394,7 +394,7 @@ a { color: inherit; }
 /* ---------- footer ---------- */
 .site-footer { background: var(--ink); color: var(--paper); border-top: 4px solid var(--edge); padding: 2.5rem 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; }
-.footer-brand b { color: var(--accent-2); font-size: .8rem; }
+.footer-brand b { color: var(--accent); font-size: .8rem; }
 .footer-brand span { margin-left: .5rem; }
 .footer-slogan { opacity: .7; font-size: .9rem; margin: 0; }
 .footer-nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
