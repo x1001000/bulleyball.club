@@ -1,7 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
-  <rect width="16" height="16" fill="#12121f"/>
-  <rect x="2" y="2" width="12" height="12" fill="#ef5f24"/>
-  <rect x="4" y="4" width="8" height="8" fill="#ffd66a"/>
-  <rect x="4" y="7" width="8" height="2" fill="#12121f"/>
-  <rect x="7" y="4" width="2" height="8" fill="#12121f"/>
+  <style>
+    /* Same three parts as the header brand mark: frame = --accent,
+       inner square = --paper, cross = --ink. The site defaults to the
+       night palette, so this icon does too, and flips with the OS setting. */
+    .paper  { fill: #12121f }
+    .accent { fill: #ff7a35 }
+    .ink    { fill: #f2eefc }
+    @media (prefers-color-scheme: light) {
+      .paper  { fill: #f4ecdc }
+      .accent { fill: #ef5f24 }
+      .ink    { fill: #17151f }
+    }
+  </style>
+  <rect width="16" height="16" class="paper"/>
+  <rect x="2" y="2" width="12" height="12" class="accent"/>
+  <rect x="4" y="4" width="8" height="8" class="paper"/>
+  <rect x="4" y="7" width="8" height="2" class="ink"/>
+  <rect x="7" y="4" width="2" height="8" class="ink"/>
 </svg>
