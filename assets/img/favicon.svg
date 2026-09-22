@@ -1,20 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
-  <style>
-    /* Same three parts as the header brand mark: frame = --accent,
-       inner square = --paper, cross = --ink. The site defaults to the
-       night palette, so this icon does too, and flips with the OS setting. */
-    .paper  { fill: #12121f }
-    .accent { fill: #ff7a35 }
-    .ink    { fill: #f2eefc }
-    @media (prefers-color-scheme: light) {
-      .paper  { fill: #f4ecdc }
-      .accent { fill: #ef5f24 }
-      .ink    { fill: #17151f }
-    }
-  </style>
-  <rect width="16" height="16" class="paper"/>
-  <rect x="2" y="2" width="12" height="12" class="accent"/>
-  <rect x="4" y="4" width="8" height="8" class="paper"/>
-  <rect x="4" y="7" width="8" height="2" class="ink"/>
-  <rect x="7" y="4" width="2" height="8" class="ink"/>
+  <!-- A volleyball read as a court. The 18 m court is 6 m back zone, two
+       3 m zones meeting at the net, 6 m back zone: out is the middle third.
+       Same three bands a Mikasa wears, with orange in place of the blue.
+       One fixed palette — the mark does not follow the theme. -->
+  <rect x="0" y="0" width="16" height="16" fill="#ef5f24"/>
+  <rect x="2" y="2" width="12" height="4" fill="#ffffff"/>
+  <rect x="2" y="6" width="12" height="4" fill="#ffc02b"/>
+  <rect x="2" y="10" width="12" height="4" fill="#ffffff"/>
 </svg>
