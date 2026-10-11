@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
-  <!-- A volleyball read as a court, side-on. The 24-unit interior stands for
-       18 m: a 6 m back zone, the two 3 m zones that meet at the net, another
-       6 m back zone — equal thirds, and the middle one is the third that is
-       out. The orange lines bounding the yellow are the 3 m lines, cut out
-       of the yellow because an attack line's own width belongs to the front
-       zone; they are also the ball's panel seams. One fixed palette: the
-       mark does not follow the theme. -->
-  <rect x="0" y="0" width="32" height="32" fill="#ef5f24"/>
-  <rect x="4" y="4" width="24" height="8" fill="#ffffff"/>
-  <rect x="4" y="13" width="24" height="6" fill="#ffc02b"/>
-  <rect x="4" y="20" width="24" height="8" fill="#ffffff"/>
+  <!-- The court, two colours. White is the two back zones — where the ball
+       may land. Yellow is everything else: the two 3 m zones that meet at
+       the net, and the ground outside the court. Both are out, so both are
+       one colour, and the rule needs no line to explain it.
+       The court is drawn 3:2 (its true 18x9 is 2:1, too thin for a mark),
+       which leaves its corners inside the inscribed circle — a round crop
+       takes nothing, so this one artwork serves everywhere. -->
+  <rect x="0" y="0" width="32" height="32" fill="#ffc02b"/>
+  <rect x="8" y="4" width="16" height="8" fill="#ffffff"/>
+  <rect x="8" y="20" width="16" height="8" fill="#ffffff"/>
 </svg>
