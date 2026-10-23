@@ -290,7 +290,7 @@ a { color: inherit; }
    the English page carries neither it nor the card that explains it */
 [lang="en"] .hero-sub,
 [lang="en"] .ticker .zh-pun,
-[lang="en"] .name-story .card.accent-2 { display: none; }
+[lang="en"] .name-story .card.zh-only { display: none; }
 [lang="en"] .name-story .cards.two { grid-template-columns: 1fr; }
 [lang="en"] .name-story .kicker { display: none; }
 .cards.two   { grid-template-columns: repeat(2, 1fr); }
@@ -313,6 +313,8 @@ a { color: inherit; }
 .card-ico { margin-bottom: .8rem; line-height: 0; }
 .card.accent { border-top: 14px solid var(--accent); }
 .card.accent-2 { border-top: 14px solid var(--accent-2); }
+/* same orange frame the 02 rule box wears */
+.card.highlight { border-color: var(--accent); }
 .kicker { font-size: .55rem; color: var(--accent); margin-bottom: .6rem; }
 .card h4.big { font-size: 1.6rem; margin-bottom: .5em; }
 .card h4.big.latin { font-size: 1.15rem; }
