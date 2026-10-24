@@ -54,9 +54,9 @@ window.BB_I18N = {
     "about.c2.h": "沙排太麻煩",
     "about.c2.p": "沙灘排球雖然可以 2v2，但規則嚴謹、場地稀少、維護不易、各種麻煩。",
     "about.c3.h": "一定舉給你",
-    "about.c3.p": "隊友舉球一定得舉給你，只要接好球，就有好球打！",
+    "about.c3.p": "2v2，隊友舉球一定得舉給你，只要接好球，就有好球打！",
     "about.c4.h": "人少更自由",
-    "about.c4.p": "2v2 或 3v3，打整座 18×9 公尺的標準球場。能力越強，責任越大。不鬥嘴，只鬥牛。",
+    "about.c4.p": "2v2 或 3v3，打整座 18×9 公尺的標準球場，人人都是可以自由攻擊的自由球員。能力越強，責任越大。不鬥嘴，只鬥牛。",
     "about.name.en": "氣喘如牛的排球，才好玩",
     "about.name.zh": "今晚打牛排嗎？懂的就懂",
 
@@ -169,9 +169,9 @@ window.BB_I18N = {
     "about.c2.h": "Beach is a hassle",
     "about.c2.p": "Beach volleyball does have 2v2 — but the rules are strict, the courts are scarce, the sand takes upkeep. Hassle at every step.",
     "about.c3.h": "Every set is yours",
-    "about.c3.p": "Your partner has nobody else to set to. Dig it up clean and you get a ball worth hitting \u2014 every single rally.",
+    "about.c3.p": "In 2v2 your partner has nobody else to set to. Dig it up clean and you get a ball worth hitting \u2014 every single rally.",
     "about.c4.h": "Fewer players, more freedom",
-    "about.c4.p": "Two or three a side on a full 18 x 9 m court. With great power comes great responsibility. No bickering, just ball.",
+    "about.c4.p": "Two or three a side on a full 18 x 9 m court. Everyone is a libero \u2014 and for once the word means what it says: free to attack. With great power comes great responsibility. No bickering, just ball.",
     "about.name.en": "Volleyball is only fun when it leaves you gasping like a bullfighter.",
     "about.name.zh": "The Chinese name carries a pun that only works in Chinese.",
 
