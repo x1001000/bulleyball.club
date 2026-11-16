@@ -1,0 +1,5 @@
+# rebuilt on demand: npm install, node render.js, node narrate.mjs
+node_modules/
+out/
+vo/*/narration.wav
+*.mp4
