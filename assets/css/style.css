@@ -407,3 +407,31 @@ a { color: inherit; }
 .footer-nav a { text-decoration: none; font-size: .9rem; opacity: .85; }
 .footer-nav a:hover { color: var(--accent-2); opacity: 1; }
 .copy { font-size: .55rem; opacity: .6; margin: 0; }
+
+/* ---------- rules film ----------
+   a link beside the pause button: the animation above is the teaser,
+   the narrated reel on Instagram is the full version */
+.reel-link { gap: .55em; padding-block: .35em; }
+.reel-thumb {
+  width: 18px; height: 32px; object-fit: cover; display: block;
+  border: 2px solid var(--edge); flex: none;
+}
+.reel-link::before {
+  content: ""; width: 0; height: 0; flex: none;
+  border-left: 7px solid var(--accent); border-block: 5px solid transparent;
+  order: 1;
+}
+.reel-link .reel-thumb { order: 0; }
+.reel-link span { order: 2; }
+.reel-len { font-size: .5rem; color: var(--ink-2); }
+.reel-link:hover .reel-len { color: #17151f; }
+
+.reel-dialog {
+  padding: 0; border: 4px solid var(--edge); box-shadow: 10px 10px 0 var(--shadow);
+  background: var(--card); color: var(--ink);
+  width: min(400px, 92vw); max-height: 92vh; overflow: visible;
+}
+.reel-dialog::backdrop { background: rgba(10, 10, 24, .82); }
+.reel-frame { max-height: calc(92vh - 8px); overflow: auto; line-height: 0; }
+.reel-frame iframe { display: block; width: 100%; height: 700px; border: 0; background: #fff; }
+.reel-close { position: absolute; top: -18px; right: -18px; z-index: 1; }

@@ -71,6 +71,11 @@ window.BB_I18N = {
     "rules.count.p": "2v2 或 3v3，現場有幾個人就決定打哪一種，規則完全不用改。場地一律是整座標準球場——鬥牛的重點從來不是把場地變小，而是把人變少。",
     "rules.why.h": "為什麼是三米線",
     "rules.why.p": "三米線本來就畫在每一座標準球場上，不必重新標線。當前後排的界線變成場內外的界線，不僅巧妙地將 Bulleyball 的攻守優勢微調出更好的平衡，也將排球從輪轉規則解放出來！",
+    "reel.h": "鬥牛排球規則影片",
+    "reel.cta": "看完整版影片",
+    "reel.url": "https://www.instagram.com/reel/DfxQILjB1dt/",
+    "reel.img": "assets/img/reel-zh.jpg",
+    "reel.close": "關閉影片",
 
     "effect.title": "這條規則改變了什麼",
     "effect.c1.h": "吊球與輕推失效",
@@ -186,6 +191,11 @@ window.BB_I18N = {
     "rules.count.p": "2v2 or 3v3 — whoever turned up decides which, and nothing in the rules changes either way. The court is always the full standard one: the point of pick-up was never to shrink the court, only the squad.",
     "rules.why.h": "Why the 3 m line",
     "rules.why.p": "The 3 m line is already painted on every standard court, so there is nothing to mark out. And turning the line between front row and back row into the line between in and out does two things at once: it tunes the balance of attack and defence towards something better, and it frees volleyball from the rotation rules.",
+    "reel.h": "Bulleyball rules film",
+    "reel.cta": "Watch the full film",
+    "reel.url": "https://www.instagram.com/reel/Dfz118IzMGT/",
+    "reel.img": "assets/img/reel-en.jpg",
+    "reel.close": "Close video",
 
     "effect.title": "What the rule changes",
     "effect.c1.h": "The dink dies",

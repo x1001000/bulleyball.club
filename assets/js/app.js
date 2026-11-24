@@ -99,6 +99,55 @@
     syncPlayLabel();
   }
 
+  /* ---------------- rules film ----------------
+     The button is a plain link to the reel, so phones (and pages without
+     JS) go straight to Instagram. On a wide screen with a mouse it opens
+     a lightbox instead, and only then is Instagram's embed loaded.       */
+  function bootReel() {
+    var cover = document.querySelector(".reel-link");
+    var dlg = document.getElementById("reel-dialog");
+    if (!cover || !dlg || typeof dlg.showModal !== "function") return;
+    var frame = dlg.querySelector(".reel-frame");
+    var resumeCourt = false;
+    var wide = window.matchMedia("(min-width: 760px) and (pointer: fine)");
+
+    cover.addEventListener("click", function (e) {
+      if (!wide.matches || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      var m = /\/reel\/([\w-]+)/.exec(cover.getAttribute("href") || "");
+      if (!m) return;
+      e.preventDefault();
+      var f = document.createElement("iframe");
+      f.src = "https://www.instagram.com/reel/" + m[1] + "/embed/";
+      f.title = t("reel.h");
+      f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
+      f.setAttribute("allowfullscreen", "");
+      frame.appendChild(f);
+      /* one moving court at a time: hold the animation while the film plays */
+      resumeCourt = !!(window.BBCourt && window.BBCourt.isPlaying());
+      if (resumeCourt) { window.BBCourt.setPlaying(false); syncPlayLabel(); }
+      dlg.showModal();
+    });
+
+    /* Instagram's embed reports its own height; size the frame to fit */
+    window.addEventListener("message", function (e) {
+      if (!/^https:\/\/www\.instagram\.com$/.test(e.origin)) return;
+      var f = frame.querySelector("iframe");
+      if (!f || e.source !== f.contentWindow) return;
+      try {
+        var d = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
+        if (d && d.type === "MEASURE" && d.details && d.details.height) f.style.height = d.details.height + "px";
+      } catch (err) {}
+    });
+
+    dlg.querySelector(".reel-close").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    /* dropping the iframe is what stops the video */
+    dlg.addEventListener("close", function () {
+      frame.innerHTML = "";
+      if (resumeCourt) { window.BBCourt.setPlaying(true); syncPlayLabel(); resumeCourt = false; }
+    });
+  }
+
   /* ---------------- wiring ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
     bootStage();
@@ -131,6 +180,8 @@
         }
       });
     }
+
+    bootReel();
 
     var year = document.getElementById("year");
     if (year) year.textContent = new Date().getFullYear();
