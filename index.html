@@ -120,12 +120,23 @@
           </div>
           <div class="caption" id="stage-caption" data-i18n="stage.serve">發球</div>
         </div>
+        <!-- the whole court is the pause/play control, like a video player -->
+        <button id="anim-toggle" class="stage-toggle" type="button" aria-pressed="false"
+                aria-label="暫停動畫">
+          <span class="stage-icon" aria-hidden="true">
+            <svg class="i-play" viewBox="0 0 7 7" width="28" height="28" shape-rendering="crispEdges">
+              <path d="M0 0h2v7H0zM2 1h2v5H2zM4 2h2v3H4zM6 3h1v1H6z" fill="currentColor"/>
+            </svg>
+            <svg class="i-pause" viewBox="0 0 7 7" width="28" height="28" shape-rendering="crispEdges">
+              <path d="M0 0h2v7H0zM5 0h2v7H5z" fill="currentColor"/>
+            </svg>
+          </span>
+        </button>
         <div class="stage-fallback" id="stage-fallback" hidden data-i18n="stage.fallback">
           你的瀏覽器無法顯示這段動畫，但球場永遠都在。
         </div>
       </div>
       <figcaption class="stage-cap">
-        <button id="anim-toggle" class="pixel-btn small" data-i18n="ui.pause">暫停動畫</button>
         <!-- the animation is the teaser; the full narrated film lives on
              Instagram and is only loaded when someone asks for it -->
         <a class="pixel-btn small reel-link" href="https://www.instagram.com/reel/DfxQILjB1dt/" target="_blank" rel="noopener"

@@ -435,3 +435,42 @@ a { color: inherit; }
 .reel-frame { max-height: calc(92vh - 8px); overflow: auto; line-height: 0; }
 .reel-frame iframe { display: block; width: 100%; height: 700px; border: 0; background: #fff; }
 .reel-close { position: absolute; top: -18px; right: -18px; z-index: 1; }
+
+/* ---------- tap the court to pause / play ----------
+   the whole stage is one button; the HUD above it ignores the pointer */
+.stage-toggle {
+  position: absolute; inset: 0; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0; padding: 0; border: 0; background: transparent;
+  cursor: pointer; color: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+.stage-toggle:focus-visible { outline: 3px solid var(--accent-3); outline-offset: -6px; }
+.stage-hud { z-index: 2; }
+.stage-icon {
+  width: 76px; height: 76px; display: flex; align-items: center; justify-content: center;
+  background: var(--accent); border: 4px solid #17151f; box-shadow: 5px 5px 0 rgba(23, 21, 31, .9);
+  opacity: 0; transform: scale(.85);
+  transition: opacity .15s steps(3), transform .15s steps(3);
+}
+.stage-icon .i-play { margin-left: 4px; }
+/* the icon shows what a tap will do next */
+.stage-toggle .i-play,
+.stage-toggle[data-state="paused"] .i-pause { display: none; }
+.stage-toggle[data-state="paused"] .i-play { display: block; }
+/* paused: the play button stays up over a dimmed court */
+.stage-toggle[data-state="paused"] { background: rgba(10, 10, 24, .35); }
+.stage-toggle[data-state="paused"] .stage-icon { opacity: 1; transform: none; }
+/* playing: the pause button only shows on hover or keyboard focus */
+@media (hover: hover) {
+  .stage-toggle:hover .stage-icon { opacity: .9; transform: none; }
+}
+.stage-toggle:focus-visible .stage-icon { opacity: .9; transform: none; }
+/* right after a tap: a short flash, then it fades again */
+.stage-toggle.flash[data-state="playing"] .stage-icon { animation: stage-flash .6s steps(6) forwards; }
+@keyframes stage-flash { 0% { opacity: 1; transform: scale(1.1); } 60% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@media (hover: hover) { .stage-toggle.flash[data-state="playing"]:hover .stage-icon { animation: none; } }
+@media (max-width: 640px) {
+  .stage-icon { width: 56px; height: 56px; border-width: 3px; }
+  .stage-icon svg { width: 21px; height: 21px; }
+}

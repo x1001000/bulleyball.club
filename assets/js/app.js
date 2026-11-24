@@ -66,10 +66,15 @@
     var el = document.getElementById("stage-caption");
     if (el) { el.setAttribute("data-i18n", capKey); el.textContent = t(capKey); }
   }
+  /* the court itself is the button: its label says what a tap will do,
+     and data-state drives the icon (big play while paused) */
   function syncPlayLabel() {
     var btn = document.getElementById("anim-toggle");
     if (!btn || !window.BBCourt) return;
-    btn.textContent = window.BBCourt.isPlaying() ? t("ui.pause") : t("ui.play");
+    var playing = window.BBCourt.isPlaying();
+    btn.setAttribute("aria-label", playing ? t("ui.pause") : t("ui.play"));
+    btn.setAttribute("aria-pressed", playing ? "false" : "true");
+    btn.setAttribute("data-state", playing ? "playing" : "paused");
   }
 
   function bootStage() {
@@ -164,6 +169,8 @@
     if (at) at.addEventListener("click", function () {
       window.BBCourt.setPlaying(!window.BBCourt.isPlaying());
       syncPlayLabel();
+      /* a brief flash of the new state, as video players do */
+      at.classList.remove("flash"); void at.offsetWidth; at.classList.add("flash");
     });
 
     var nav = document.getElementById("site-nav");
