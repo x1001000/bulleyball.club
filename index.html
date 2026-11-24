@@ -126,6 +126,14 @@
       </div>
       <figcaption class="stage-cap">
         <button id="anim-toggle" class="pixel-btn small" data-i18n="ui.pause">暫停動畫</button>
+        <!-- the animation is the teaser; the full narrated film lives on
+             Instagram and is only loaded when someone asks for it -->
+        <a class="pixel-btn small reel-link" href="https://www.instagram.com/reel/DfxQILjB1dt/" target="_blank" rel="noopener"
+           data-i18n-attr="href:reel.url">
+          <img class="reel-thumb" src="assets/img/reel-zh.jpg" width="18" height="32" alt="" data-i18n-attr="src:reel.img">
+          <span data-i18n="reel.cta">看完整版影片</span>
+          <span class="reel-len latin" aria-hidden="true">0:32</span>
+        </a>
         <span data-i18n="stage.hint">切換日夜模式，球場也會跟著換成白天／夜間。</span>
       </figcaption>
     </figure>
@@ -261,6 +269,7 @@
         <p data-i18n="rules.why.p">三米線本來就畫在每一座標準球場上，不必重新標線。當前後排的界線變成場內外的界線，不僅巧妙地將 Bulleyball 的攻守優勢微調出更好的平衡，也將排球從輪轉規則解放出來！</p>
       </article>
     </div>
+
   </div>
 </section>
 
@@ -415,6 +424,13 @@
     <p class="copy latin">© <span id="year">2026</span> Bulleyball Club</p>
   </div>
 </footer>
+
+<dialog class="reel-dialog" id="reel-dialog" data-i18n-attr="aria-label:reel.h" aria-label="鬥牛排球規則影片">
+  <button class="pixel-btn small reel-close" type="button" data-i18n-attr="aria-label:reel.close" aria-label="關閉影片">
+    <span aria-hidden="true">✕</span>
+  </button>
+  <div class="reel-frame"></div>
+</dialog>
 
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/court3d.js"></script>
